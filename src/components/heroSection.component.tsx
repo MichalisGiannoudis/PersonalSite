@@ -1,6 +1,6 @@
 export const HeroSection = () => {
     return (
-        <div className="mb-12">
+        <div className="flex flex-col items-center mb-12">
             <p className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-indigo-200 bg-clip-text text-transparent transform transition-all duration-1000 ease-out animate-[slideFromLeft_1s_ease-out]">
                 Welcome to My
             </p>
