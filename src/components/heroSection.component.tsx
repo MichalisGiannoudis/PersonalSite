@@ -23,8 +23,7 @@ export const HeroSection = () => {
                 <div className="absolute top-1/4 right-2/3 w-1 h-1 bg-purple-600/50 rounded-full animate-float"></div>
                 <div className="absolute bottom-1/4 right-1/5 w-1.5 h-1.5 bg-purple-800/40 rounded-full animate-float-slow"></div>
                 
-            </div>
-            
+            </div>      
             {/* Content */}
             <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-4xl">
                 <p className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-indigo-200 bg-clip-text text-transparent transform transition-all duration-1000 ease-out animate-[slideFromLeft_1s_ease-out]">

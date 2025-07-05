@@ -33,7 +33,7 @@ export const NavBar = () => {
                   activeSection === 0 ? 'text-white' : 'text-white'
                 }`}>
                 <span className="inline-block from-center-vert transition-transform duration-1000 ease-in-out">
-                About me
+                  About me
                 </span>
             </p>
         </div>
@@ -43,7 +43,7 @@ export const NavBar = () => {
                   activeSection === 1 ? 'text-white' : 'text-white'
                 }`}>
                 <span className="inline-block from-center-vert transition-transform duration-1000 ease-in-out">
-                Services
+                  Portfolio
                 </span>
             </p>
         </div>
@@ -53,8 +53,8 @@ export const NavBar = () => {
                   activeSection === 2 ? 'text-white' : 'text-white'
                 }`}>
                 <span className="inline-block from-center-vert transition-transform duration-1000 ease-in-out">
-                Contact
-            </span>
+                  Contact
+                </span>
             </p>
         </div>
         </div>
