@@ -1,6 +1,6 @@
 export const HeroSection = () => {
     return (
-        <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+        <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden" data-hero-section>
             <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900/80 to-black"></div>
             
             <div className="absolute inset-0 opacity-20">

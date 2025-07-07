@@ -1,9 +1,47 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 export const NavBar = () => {
   const [activeSection, setActiveSection] = useState<number>(0);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const throttle = useCallback((func: Function, limit: number) => {
+    let inThrottle: boolean;
+    return function(this: any, ...args: any[]) {
+      if (!inThrottle) {
+        func.apply(this, args);
+        inThrottle = true;
+        setTimeout(() => inThrottle = false, limit);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const heroSection = document.querySelector('[data-hero-section]') as HTMLElement;
+      const heroHeight = heroSection ? heroSection.offsetHeight : 800;
+      
+      if (currentScrollY < 100) {
+        setIsVisible(true);
+      }
+      else if (currentScrollY > lastScrollY && currentScrollY > heroHeight * 0.7) {
+        setIsVisible(false);
+      }
+      else if (currentScrollY < lastScrollY) {
+        setIsVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    const throttledHandleScroll = throttle(handleScroll, 100);
+    window.addEventListener('scroll', throttledHandleScroll, { passive: true });
+    
+    return () => window.removeEventListener('scroll', throttledHandleScroll);
+  }, [lastScrollY, throttle]);
 
   const scrollTo = (value: string) => {
     const section = document.getElementById(value);
@@ -18,7 +56,11 @@ export const NavBar = () => {
   };
 
   return (
-    <div className="fixed top-5 left-1/2 transform -translate-x-1/2 pointer-events-auto bg-gray-900/40 md:bg-gray-900/40 w-[300px] md:w-[400px] h-16 rounded-2xl md:rounded-4xl shadow-lg backdrop-blur-md drop-shadow-xl z-50">
+    <div className={`fixed top-5 left-1/2 transform -translate-x-1/2 pointer-events-auto bg-gray-900/40 md:bg-gray-900/40 w-[300px] md:w-[400px] h-16 rounded-2xl md:rounded-4xl shadow-lg backdrop-blur-md drop-shadow-xl z-50 transition-all duration-700 ease-out ${
+      isVisible 
+        ? 'translate-y-0 opacity-100' 
+        : '-translate-y-20 opacity-0'
+    }`}>
         <div className="grid grid-cols-3 h-full">
           <div className={`absolute top-1 left-1 h-7/8 w-[calc(33.333%-0.15rem)] bg-purple-700/50 rounded-3xl transition-all duration-700 ease-in-out ${
               activeSection === 0 ? 'translate-x-0' : 
