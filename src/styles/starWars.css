@@ -1,0 +1,235 @@
+/* Star Wars Crawl Effect */
+@keyframes starWarsCrawl {
+  0% {
+    transform: translateY(100vh) rotateX(20deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotateX(20deg);
+    opacity: 0;
+  }
+}
+
+.star-wars-crawl {
+  animation: starWarsCrawl 60s linear infinite;
+  transform-origin: 50% 600px;
+}
+
+/* Star Wars Credits Style Animation */
+@keyframes starWarsCredits {
+  0% {
+    transform: translateX(-50%) translateY(100vh) rotateX(25deg);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-150vh) rotateX(25deg);
+    opacity: 0;
+  }
+}
+
+.star-wars-crawl-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 25%, #37133a 50%, #061931 75%, #1a1a2e 100%);
+}
+
+.star-wars-crawl-container.playing .star-wars-crawl-text {
+  animation: starWarsCredits 45s linear infinite;
+}
+
+.star-wars-crawl-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) rotateX(25deg);
+  transform-origin: 50% 50%;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  padding: 0 2rem;
+  font-family: var(--font-audiowide), sans-serif;
+  z-index: 10;
+}
+
+/* Episode Styles */
+.episode-section {
+  margin-bottom: 8rem;
+}
+
+.episode-title {
+  color: #fbbf24;
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
+  line-height: 1.2;
+}
+
+.episode-subtitle {
+  color: #67e8f9;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: 600;
+  margin-bottom: 3rem;
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 15px rgba(103, 232, 249, 0.3);
+}
+
+.episode-story {
+  color: #fde047;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px rgba(253, 224, 71, 0.2);
+}
+
+.opening-line {
+  font-style: italic;
+  color: #fef3c7;
+  animation: pulse 2s ease-in-out infinite;
+  margin-bottom: 2rem;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+}
+
+.story-paragraph {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  text-align-last: center;
+}
+
+.episode-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem 0;
+}
+
+.separator-line {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #fbbf24, transparent);
+  width: 100%;
+  max-width: 200px;
+}
+
+.separator-star {
+  color: #fbbf24;
+  font-size: 1.5rem;
+  margin: 0 1rem;
+  text-shadow: 0 0 15px rgba(251, 191, 36, 0.5);
+}
+
+.final-message {
+  color: #67e8f9;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: bold;
+  margin-top: 6rem;
+  animation: pulse 3s ease-in-out infinite;
+  text-shadow: 0 0 20px rgba(103, 232, 249, 0.5);
+}
+
+/* Fade effect for depth */
+.star-wars-crawl-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30%;
+  background: linear-gradient(to bottom, rgba(0,0,0,1), transparent);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.star-wars-crawl-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0,0,0,1), transparent);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.stars-bg {
+    background: #000 url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: 0;
+  }
+  
+  .stars-1 {
+    background-image: radial-gradient(1px 1px at 20px 30px, white, transparent), radial-gradient(1px 1px at 40px 70px, white, transparent), radial-gradient(1px 1px at 90px 40px, white, transparent), radial-gradient(2px 2px at 130px 80px, white, transparent), radial-gradient(1px 1px at 160px 30px, white, transparent);
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    animation: zoom-1 10s linear infinite;
+    z-index: 1;
+  }
+  
+  .stars-2 {
+    background-image: radial-gradient(1px 1px at 50px 100px, white, transparent), radial-gradient(1px 1px at 110px 150px, white, transparent), radial-gradient(2px 2px at 180px 90px, white, transparent);
+    background-repeat: repeat;
+    background-size: 250px 250px;
+    animation: zoom-2 15s linear infinite;
+    z-index: 2;
+  }
+  
+  .stars-3 {
+    background-image: radial-gradient(2px 2px at 80px 50px, white, transparent), radial-gradient(1px 1px at 140px 190px, white, transparent), radial-gradient(2px 2px at 220px 130px, white, transparent);
+    background-repeat: repeat;
+    background-size: 300px 300px;
+    animation: zoom-3 20s linear infinite;
+    z-index: 3;
+  }
+  
+  .stars-1, .stars-2, .stars-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  @keyframes zoom-1 {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.5);
+    }
+  }
+  
+  @keyframes zoom-2 {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.8);
+    }
+  }
+  
+  @keyframes zoom-3 {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(2.2);
+    }
+  }
