@@ -81,6 +81,10 @@
   }
 }
 
+body {
+  font-family: Audiowide, system-ui, sans-serif;
+}
+
 /* Planetary System Animations */
 .planet-orbit-1 {
   animation: spin 12s linear infinite;
