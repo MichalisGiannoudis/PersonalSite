@@ -8,22 +8,7 @@ export const StarWars = ({isPlaying}: {isPlaying:boolean}) => {
     const[play , setToPlay] = useState<boolean>(false);
 
     useEffect(() => {
-        let timer: NodeJS.Timeout;
-        
-        if (isPlaying) {
-            timer = setTimeout(() => {
-                setToPlay(true);
-            }, 0);
-        } else {
-            setToPlay(false);
-        }
-
-        return () => {
-            if (timer) {
-                clearTimeout(timer);
-            }
-        };
-
+        setToPlay(isPlaying);
     }, [isPlaying]);
 
     return (

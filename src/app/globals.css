@@ -1,86 +1,5 @@
 @import "tailwindcss";
 
-@keyframes slideFromLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideFromRight {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeUp {
-  0% {
-    transform: translateY(30px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
-    opacity: 0.3;
-  }
-  50% {
-    transform: translateY(-20px);
-    opacity: 0.8;
-  }
-}
-
-@keyframes float-delayed {
-  0%,
-  100% {
-    transform: translateY(0px) translateX(0px);
-    opacity: 0.2;
-  }
-  50% {
-    transform: translateY(-15px) translateX(5px);
-    opacity: 0.6;
-  }
-}
-
-@keyframes float-slow {
-  0%,
-  100% {
-    transform: translateY(0px);
-    opacity: 0.4;
-  }
-  50% {
-    transform: translateY(-10px);
-    opacity: 0.7;
-  }
-}
-
-@keyframes float-delayed-2 {
-  0%,
-  100% {
-    transform: translateY(0px) translateX(0px);
-    opacity: 0.3;
-  }
-  50% {
-    transform: translateY(-25px) translateX(-10px);
-    opacity: 0.9;
-  }
-}
-
 body {
   font-family: Audiowide, system-ui, sans-serif;
 }
@@ -190,4 +109,10 @@ body {
 
 .animate-float-delayed-2 {
   animation: float-delayed-2 7s ease-in-out infinite 3s;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }

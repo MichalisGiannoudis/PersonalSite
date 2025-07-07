@@ -1,24 +1,6 @@
-/* Star Wars Crawl Effect */
-@keyframes starWarsCrawl {
-  0% {
-    transform: translateY(100vh) rotateX(20deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-100vh) rotateX(20deg);
-    opacity: 0;
-  }
-}
-
-.star-wars-crawl {
-  animation: starWarsCrawl 60s linear infinite;
-  transform-origin: 50% 600px;
-}
-
-/* Star Wars Credits Style Animation */
 @keyframes starWarsCredits {
   0% {
-    transform: translateX(-50%) translateY(100vh) rotateX(25deg);
+    transform: translateX(-50%) translateY(100vh) rotateX(25deg) translateZ(400px);
     opacity: 0;
   }
   5% {
@@ -28,7 +10,7 @@
     opacity: 1;
   }
   100% {
-    transform: translateX(-50%) translateY(-150vh) rotateX(25deg);
+    transform: translateX(-50%) translateY(-390vh) rotateX(25deg) translateZ(-1400px);
     opacity: 0;
   }
 }
@@ -41,28 +23,28 @@
   height: 100%;
   overflow: hidden;
   transform-style: preserve-3d;
-  background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 25%, #37133a 50%, #061931 75%, #1a1a2e 100%);
+  perspective: 800px;
+  perspective-origin: 50% 100%;
 }
 
 .star-wars-crawl-container.playing .star-wars-crawl-text {
-  animation: starWarsCredits 45s linear infinite;
+  animation: starWarsCredits 50s linear infinite;
 }
 
 .star-wars-crawl-text {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%) rotateX(25deg);
-  transform-origin: 50% 50%;
+  transform: translateX(-50%) translateY(100vh) rotateX(25deg) translateZ(-100px);
+  transform-origin: 50% 0%;
   width: 100%;
-  max-width: 800px;
+  max-width: 600px;
   text-align: center;
   padding: 0 2rem;
   font-family: var(--font-audiowide), sans-serif;
   z-index: 10;
 }
 
-/* Episode Styles */
 .episode-section {
   margin-bottom: 8rem;
 }
@@ -138,7 +120,6 @@
   text-shadow: 0 0 20px rgba(103, 232, 249, 0.5);
 }
 
-/* Fade effect for depth */
 .star-wars-crawl-container::before {
   content: '';
   position: absolute;
@@ -147,7 +128,7 @@
   right: 0;
   height: 30%;
   background: linear-gradient(to bottom, rgba(0,0,0,1), transparent);
-  z-index: 1;
+  z-index: 20;
   pointer-events: none;
 }
 
@@ -159,77 +140,152 @@
   right: 0;
   height: 40%;
   background: linear-gradient(to top, rgba(0,0,0,1), transparent);
-  z-index: 1;
+  z-index: 20;
   pointer-events: none;
 }
 
 .stars-bg {
-    background: #000 url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: block;
-    z-index: 0;
+  background: #000;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: 0;
+}
+
+.stars-1, .stars-2, .stars-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-repeat: repeat;
+}
+
+.stars-1 {
+  background-image: radial-gradient(1px 1px at 20px 30px, white, transparent), 
+                    radial-gradient(1px 1px at 40px 70px, white, transparent), 
+                    radial-gradient(1px 1px at 90px 40px, white, transparent), 
+                    radial-gradient(2px 2px at 130px 80px, white, transparent), 
+                    radial-gradient(1px 1px at 160px 30px, white, transparent);
+  background-size: 200px 200px;
+  animation: zoom-1 10s linear infinite;
+  z-index: 1;
+}
+
+.stars-2 {
+  background-image: radial-gradient(1px 1px at 50px 100px, white, transparent), 
+                    radial-gradient(1px 1px at 110px 150px, white, transparent), 
+                    radial-gradient(2px 2px at 180px 90px, white, transparent);
+  background-size: 250px 250px;
+  animation: zoom-2 15s linear infinite;
+  z-index: 2;
+}
+
+.stars-3 {
+  background-image: radial-gradient(2px 2px at 80px 50px, white, transparent), 
+                    radial-gradient(1px 1px at 140px 190px, white, transparent), 
+                    radial-gradient(2px 2px at 220px 130px, white, transparent);
+  background-size: 300px 300px;
+  animation: zoom-3 20s linear infinite;
+  z-index: 3;
+}
+
+@keyframes zoom-1 {
+  from { transform: scale(1); }
+  to { transform: scale(1.5); }
+}
+
+@keyframes zoom-2 {
+  from { transform: scale(1); }
+  to { transform: scale(1.8); }
+}
+
+@keyframes zoom-3 {
+  from { transform: scale(1); }
+  to { transform: scale(2.2); }
+}
+
+@keyframes fade-out-box {
+  from {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .stars-1 {
-    background-image: radial-gradient(1px 1px at 20px 30px, white, transparent), radial-gradient(1px 1px at 40px 70px, white, transparent), radial-gradient(1px 1px at 90px 40px, white, transparent), radial-gradient(2px 2px at 130px 80px, white, transparent), radial-gradient(1px 1px at 160px 30px, white, transparent);
-    background-repeat: repeat;
-    background-size: 200px 200px;
-    animation: zoom-1 10s linear infinite;
-    z-index: 1;
+  to {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .stars-2 {
-    background-image: radial-gradient(1px 1px at 50px 100px, white, transparent), radial-gradient(1px 1px at 110px 150px, white, transparent), radial-gradient(2px 2px at 180px 90px, white, transparent);
-    background-repeat: repeat;
-    background-size: 250px 250px;
-    animation: zoom-2 15s linear infinite;
-    z-index: 2;
+}
+
+.animate-fade-out-box {
+  animation: fade-out-box 0.5s ease-out forwards;
+}
+
+@keyframes shrink-line {
+  from {
+    transform: scaleY(1);
   }
-  
-  .stars-3 {
-    background-image: radial-gradient(2px 2px at 80px 50px, white, transparent), radial-gradient(1px 1px at 140px 190px, white, transparent), radial-gradient(2px 2px at 220px 130px, white, transparent);
-    background-repeat: repeat;
-    background-size: 300px 300px;
-    animation: zoom-3 20s linear infinite;
-    z-index: 3;
+  to {
+    transform: scaleY(0);
   }
-  
-  .stars-1, .stars-2, .stars-3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+}
+
+.animate-shrink-line {
+  animation: shrink-line 0.4s ease-in-out forwards;
+  transform-origin: center;
+}
+
+@keyframes expand-horizontal {
+  from {
+    width: 0%;
   }
-  
-  @keyframes zoom-1 {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(1.5);
-    }
+  to {
+    width: 90%;
   }
-  
-  @keyframes zoom-2 {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(1.8);
-    }
+}
+
+.animate-expand-horizontal {
+  animation: expand-horizontal 0.7s ease-out forwards;
+}
+
+@keyframes move-line-up {
+  from {
+    transform: translateY(0);
   }
-  
-  @keyframes zoom-3 {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(2.2);
-    }
+  to {
+    transform: translateY(-100vh);
   }
+}
+
+.animate-move-line-up {
+  animation: move-line-up 1s ease-in forwards;
+}
+
+@keyframes move-line-down {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+.animate-move-line-down {
+  animation: move-line-down 1s ease-in forwards;
+}
+
+@keyframes fade-in-crawl {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in-crawl {
+  animation: fade-in-crawl 1s ease-in forwards;
+}
