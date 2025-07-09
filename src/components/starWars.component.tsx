@@ -22,17 +22,12 @@ export const StarWars = ({isPlaying}: {isPlaying:boolean}) => {
                 <div className="star-wars-crawl-text">
                     {episodes.map((episode, index) => (
                         <div key={index} className="episode-section">
-                            {/* Episode Title */}
                             <div className="episode-title">
                                 {episode.title}
                             </div>
-                            
-                            {/* Company and Period */}
                             <div className="episode-subtitle">
                                 {episode.company} • {episode.period}
                             </div>
-                            
-                            {/* Story Content */}
                             <div className="episode-story">
                                 {episode.story.map((paragraph, pIndex) => (
                                     <p key={pIndex} className={pIndex === 0 ? "opening-line" : "story-paragraph"}>
@@ -40,8 +35,6 @@ export const StarWars = ({isPlaying}: {isPlaying:boolean}) => {
                                     </p>
                                 ))}
                             </div>
-                            
-                            {/* Episode Separator */}
                             {index < episodes.length - 1 && (
                                 <div className="episode-separator">
                                     <div className="separator-line"></div>
@@ -51,7 +44,6 @@ export const StarWars = ({isPlaying}: {isPlaying:boolean}) => {
                             )}
                         </div>
                     ))}
-
                     <div className="final-message">
                         The saga continues...
                     </div>
