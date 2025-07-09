@@ -3,9 +3,15 @@ import { Skills } from "./skills.component";
 
 export const BioSection = () => {
     return (
-        <div id="bio-section" className="min-h-screen bg-gray-900 text-white py-16 px-8">
-            <div className="max-w-6xl mx-auto">
-
+        <div id="bio-section" className="min-h-screen bg-black text-white py-16 px-8 relative">
+            {/* Blinking Stars Background */}
+            <div className="stars-background">
+                <div className="blinking-stars"></div>
+                <div className="blinking-stars-2"></div>
+                <div className="blinking-stars-3"></div>
+            </div>
+            
+            <div className="max-w-6xl mx-auto relative z-10">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl font-bold mb-6">So, who is Mike?</h2>
                 </div>

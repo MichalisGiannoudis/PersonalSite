@@ -30,7 +30,7 @@ export const TimeLine = () => {
     };
 
     return (
-        <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50 relative min-h-[800px] overflow-hidden">
+        <div className="bg-gray-900/30 rounded-xl p-8 border border-gray-700/50 relative min-h-[800px] overflow-hidden">
             <div className="justify-center text-center">
                 <h3 className="text-3xl font-bold mb-4 text-center cursor-default">My Journey</h3>
                 <p className="cursor-pointer mb-4" onClick={handleVisualizeClick}>( Visualized )</p>
