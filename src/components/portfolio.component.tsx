@@ -1,5 +1,5 @@
 import { ProjectCard } from "./projectCard.component";
-import { projects } from "@/types/projects"
+import { projects } from "@/content/projects"
 
 export const Portfolio = () => {
     return (
@@ -49,14 +49,7 @@ export const Portfolio = () => {
                 </div>
                 <div className="grid grid-cols-2 gap-8">
                     { projects.map((project, index) => 
-                        <ProjectCard 
-                            key={ index } 
-                            title={ project.title } 
-                            image={ project.image } 
-                            endImage={ project.endImage } 
-                            description= { project.description } 
-                            phase = { project.phase }
-                            link={ project.link }/>
+                        <ProjectCard key={ index } project = { project }/>
                     )}
                 </div>
             </div>

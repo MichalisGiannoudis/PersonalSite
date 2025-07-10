@@ -1,0 +1,38 @@
+export const projects = [
+    {
+        title: "Project Drew",
+        image: "./wing-starfighter.png",
+        endImage: "./neptune-planet.png",
+        description: "A personal site for a lawyer.",
+        phase: "P3",
+        skills: "React, TypeScript, Tailwind, Git, Figma",
+        link: "#",
+    },
+    {
+        title: "KyLib",
+        image: "./empire-ship.png",
+        endImage: "./mercury-planet.png",
+        description: "Your non-ordinary book libray.",
+        phase: "P2",
+        skills: "React, TypeScript, Tailwind, Node.js, MongoDB, Git, Figma",
+        link: "#",
+    },
+    {
+        title: "InstaMe",
+        image: "./rebellion-ship.png",
+        endImage: "./mercury-planet.png",
+        description: "Instagram dashboard.",
+        phase: "P1",
+        skills: "React, TypeScript, Tailwind, Node.js, MongoDB, Postman, Git, Figma",
+        link: "#",
+    },
+    {
+        title: "Interactive Forest",
+        image: "./lambda-class-shuttle-1.png",
+        endImage: "./mercury-planet.png",
+        description: "An interactive experience through a forest",
+        phase: "P4",
+        skills: "TypeScript, Tailwind, Git, Figma",
+        link: "#",
+    },
+];
