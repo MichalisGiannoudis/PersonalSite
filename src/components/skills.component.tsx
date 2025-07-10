@@ -2,8 +2,18 @@ import { technicalSkills, nonTechnicalSkills } from "@/types/skills"
 
 export const Skills = () => {
     return (
-        <div className="bg-gray-900/30 rounded-xl p-8 border border-gray-700/50">
-            <div className="relative flex items-center justify-center min-h-[600px]">
+        <>
+            <div className="text-center mb-16">
+                <div className="flex items-center justify-center mb-6">
+                    <p className="text-4xl font-bold mx-4 whitespace-nowrap">My Universe</p>
+                </div>
+                <div className="flex items-center justify-center mb-6">
+                    <div className="h-0.5 flex-1 bg-gradient-to-r from-transparent to-white/40"></div>
+                    <p className="text-2xl font-bold mx-4 whitespace-nowrap">Skills</p>
+                    <div className="h-0.5 flex-1 bg-gradient-to-l from-transparent to-white/40"></div>
+                </div>
+            </div>
+            <div className="relative flex items-center justify-center min-h-[540px]">
                 <div className="absolute z-10 w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full shadow-2xl shadow-yellow-400/50 flex items-center justify-center">
                     <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full animate-pulse"></div>
                 </div>
@@ -61,13 +71,7 @@ export const Skills = () => {
                         );
                     })}
                 </div>
-
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-20">
-                    <div className="text-center">
-                        <div className="text-3xl font-bold text-white mb-1">My (Universe) Skills</div>
-                    </div>
-                </div>
             </div>
-        </div>
+        </>
     )
 }
