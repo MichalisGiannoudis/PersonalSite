@@ -87,9 +87,16 @@ export const ProjectCard = ({ project } : {  project:Project }) => {
                     </div>
                 </div>
             </div>
+            <div className="flex items-center justify-center mb-4">
+                <p className="text-lg font-medium mb-2">Mission</p>
+                <div className="flex-1 h-0.5 bg-gradient-to-l from-transparent to-white/40 ml-4"></div>
+            </div>
             <p className="text-gray-300 mb-4">{project.description}</p>
-            <p className="text-lg font-medium mb-2">Spaceship Cargo</p>
-            <div className="flex flex-wrap gap-2 mb-6">
+            <div className="flex items-center justify-center mb-4">
+                <p className="text-lg font-medium mb-2">Cargo</p>
+                <div className="flex-1 h-0.5 bg-gradient-to-l from-transparent to-white/40 ml-4"></div>
+            </div>
+            <div className="flex flex-wrap gap-2 mb-8">
                 {project.skills.split(',').map(skill => skill.trim()).map((skill, idx) => {
                     const foundSkill = [...technicalSkills, ...nonTechnicalSkills].find((s: { name: string }) => s.name === skill);
                     return (
