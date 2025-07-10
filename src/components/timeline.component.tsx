@@ -30,7 +30,7 @@ export const TimeLine = () => {
     };
 
     return (
-        <div className="bg-gray-900/30 rounded-xl p-8 border border-gray-700/50 relative min-h-[800px] overflow-hidden">
+        <div className="bg-gray-900/30 rounded-xl p-8 border border-gray-700/50 relative min-h-[800px] overflow-hidden mb-16">
             <div className="justify-center text-center">
                 <h3 className="text-3xl font-bold mb-4 text-center cursor-default">My Journey</h3>
                 <p className="cursor-pointer mb-4" onClick={handleVisualizeClick}>( Visualized )</p>
@@ -53,20 +53,15 @@ export const TimeLine = () => {
                 </>
             )}
 
-            {/* Timeline container - shows when not visualizing */}
             {!visualize && (
                 <div className="relative h-full">
-                    {/* The vertical line that shows during idle, fading, and shrinking phases */}
                     {['idle', 'fading', 'shrinking'].includes(animationStep) && (
                         <div 
                             className={`absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full h-full ${animationStep === 'shrinking' ? 'animate-shrink-line' : ''}`}>
                         </div>
                     )}
-
-                    {/* The timeline boxes, which fade out - only show during idle and fading */}
                     {['idle', 'fading'].includes(animationStep) && (
                         <div className={`space-y-12 ${animationStep === 'fading' ? 'animate-fade-out-box' : ''}`}>
-                        {/* Experience Box 1 */}
                         <div className="relative flex items-center">
                             <div className="flex-1 text-right pr-8">
                                 <div className="bg-slate-900/70 rounded-lg p-6 border border-slate-700/50 relative">
@@ -91,8 +86,6 @@ export const TimeLine = () => {
                             <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white rounded-full border-4 border-gray-900"></div>
                             <div className="flex-1 pl-8"></div>
                         </div>
-
-                        {/* Experience Box 2 */}
                         <div className="relative flex items-center">
                             <div className="flex-1 pr-8"></div>
                             <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white rounded-full border-4 border-gray-900"></div>
@@ -117,8 +110,6 @@ export const TimeLine = () => {
                                 </div>
                             </div>
                         </div>
-
-                        {/* Experience Box 3 */}
                         <div className="relative flex items-center">
                             <div className="flex-1 text-right pr-8">
                                 <div className="bg-slate-900/70 rounded-lg p-6 border border-slate-700/50 relative">

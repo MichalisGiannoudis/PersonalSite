@@ -1,13 +1,11 @@
 export const HeroSection = () => {
     return (
         <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden" data-hero-section>
-            {/* Blinking Stars Background */}
             <div className="stars-background">
                 <div className="blinking-stars"></div>
                 <div className="blinking-stars-2"></div>
                 <div className="blinking-stars-3"></div>
             </div>
-            
             <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-900/80 to-black"></div>
             <div className="absolute inset-0 opacity-20">
                 <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-blue-500/20 to-purple-700/25 rounded-full blur-3xl animate-pulse"></div>

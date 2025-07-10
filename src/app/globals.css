@@ -4,7 +4,6 @@ body {
   font-family: Audiowide, system-ui, sans-serif;
 }
 
-/* Planetary System Animations */
 .planet-orbit-1 {
   animation: spin 12s linear infinite;
 }
@@ -94,7 +93,6 @@ body {
   }
 }
 
-/* Custom utility classes */
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
@@ -117,7 +115,6 @@ body {
   }
 }
 
-/* Hero Section Text Animations */
 @keyframes slideFromLeft {
   0% {
     opacity: 0;
@@ -151,7 +148,6 @@ body {
   }
 }
 
-/* Floating animations for background elements */
 @keyframes float {
   0%, 100% {
     transform: translateY(0px);
@@ -188,7 +184,6 @@ body {
   }
 }
 
-/* Solar System Skills Animations */
 @keyframes spin-slow {
   from {
     transform: rotate(0deg);
@@ -215,7 +210,6 @@ body {
   animation: spin-reverse-slow 25s linear infinite;
 }
 
-/* Blinking Stars Background */
 .stars-background {
   position: absolute;
   top: 0;

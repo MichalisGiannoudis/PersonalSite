@@ -2,7 +2,7 @@ import { technicalSkills, nonTechnicalSkills} from "@/types/skills"
 
 export const Skills = () => {
     return (
-        <div className="bg-gray-900/30 rounded-xl p-8 border border-gray-700/50 mb-16">
+        <div className="bg-gray-900/30 rounded-xl p-8 border border-gray-700/50">
             <div className="relative flex items-center justify-center min-h-[600px]">
                 <div className="absolute z-10 w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full shadow-2xl shadow-yellow-400/50 flex items-center justify-center">
                     <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full animate-pulse"></div>

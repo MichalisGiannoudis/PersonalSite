@@ -4,7 +4,6 @@ import { Skills } from "./skills.component";
 export const BioSection = () => {
     return (
         <div id="bio-section" className="min-h-screen bg-black text-white py-16 px-8 relative">
-            {/* Blinking Stars Background */}
             <div className="stars-background">
                 <div className="blinking-stars"></div>
                 <div className="blinking-stars-2"></div>
@@ -15,10 +14,7 @@ export const BioSection = () => {
                 <div className="text-center mb-16">
                     <h2 className="text-4xl font-bold mb-6">So, who is Mike?</h2>
                 </div>
-
-                {/* Main Content Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
-                    {/* Left Side - Bio Text */}
                     <div className="space-y-8">
                         <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50">
                             <p className="text-lg leading-relaxed mb-8">
@@ -32,8 +28,6 @@ export const BioSection = () => {
                             </p>
                         </div>
                     </div>
-
-                    {/* Right Side - Image Section */}
                     <div className="flex flex-col items-center space-y-8">
                         <div className="relative">
                             <div className="w-80 h-80 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full flex items-center justify-center border border-blue-500/30 backdrop-blur-sm">
@@ -50,8 +44,6 @@ export const BioSection = () => {
                                 </div>
                             </div>
                         </div>
-
-                        {/* Stats */}
                         <div className="grid grid-cols-2 gap-6 w-full max-w-sm">
                             <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 text-center">
                                 <div className="text-3xl font-bold text-blue-400 mb-2">3+</div>
@@ -64,10 +56,8 @@ export const BioSection = () => {
                         </div>
                     </div>
                 </div>
-
-                <Skills />
                 <TimeLine />
-
+                <Skills />
             </div>
         </div>        
     );

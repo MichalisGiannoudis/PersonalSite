@@ -80,7 +80,7 @@ export const NavBar = () => {
             </p>
         </div>
         <div className="cursor-pointer group h-full flex items-center justify-center relative z-10">
-            <p onClick={() => handleSectionClick(1, 'services-section')} 
+            <p onClick={() => handleSectionClick(1, 'portfolio-section')} 
                 className={`text-lg font-bold relative overflow-hidden flex justify-center items-center cursor-pointer h-full transition-colors duration-700 ${
                   activeSection === 1 ? 'text-white' : 'text-white'
                 }`}>
