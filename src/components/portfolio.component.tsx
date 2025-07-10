@@ -1,3 +1,6 @@
+import { ProjectCard } from "./projectCard.component";
+import { projects } from "@/types/projects"
+
 export const Portfolio = () => {
     return (
         <div id="portfolio-section" className=" bg-black text-white py-16 px-8 relative">
@@ -10,12 +13,17 @@ export const Portfolio = () => {
                 <div className="text-center mb-16">
                     <h2 className="text-4xl font-bold mb-6">My (Fleet) Portfolio</h2>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:shadow-lg transition-shadow duration-300">
-                        <h3 className="text-xl font-semibold mb-4">Project Title</h3>
-                        <p className="text-gray-300 mb-4">Brief description of the project, highlighting key features and technologies used.</p>
-                        <a href="#" className="text-blue-400 hover:underline">View Project</a>
-                    </div>
+                <div className="grid grid-cols-2 gap-8">
+                    { projects.map((project, index) => 
+                        <ProjectCard 
+                            key={ index } 
+                            title={ project.title } 
+                            image={ project.image } 
+                            endImage={ project.endImage } 
+                            description= { project.description } 
+                            phase = { project.phase }
+                            link={ project.link }/>
+                    )}
                 </div>
             </div>
         </div>
