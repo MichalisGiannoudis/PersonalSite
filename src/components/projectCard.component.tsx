@@ -20,9 +20,23 @@ export const ProjectCard = ({ project } : {  project:Project }) => {
 
     return (
         <div className="bg-gray-900/20 rounded-xl p-6 border border-gray-700/50 hover:shadow-lg transition-shadow duration-300">
-            <h3 className="text-xl font-semibold mb-8">{project.title}</h3>
+            <div className="flex justify-between items-center mb-16">
+                <h3 className="text-xl font-semibold">{project.title}</h3>
+                <div className="flex gap-2">
+                    {project.screens.split(",").map(s => s.trim().toLowerCase()).map((screen) => {
+                        const icons: Record<string, string> = {
+                            desktop: "/screens/desktop-icon.png",
+                            tablet: "/screens/tablet-icon.png",
+                            mobile: "/screens/mobile-icon.png"
+                        };
+                        return (
+                            <img key={screen} src={icons[screen]} className={`w-6 h-6${screen === "tablet" ? " -mr-1.5" : ""}`}/>
+                        );
+                    })}
+                </div>
+            </div>
             <div className={`grid ${project.phase === 'P4' ? 'grid-cols-1 justify-end mb-1.5' : 'grid-cols-2'}`}>
-                <img src={project.image} className={`w-8 h-8 mb-2 rotate-90 ${
+                <img src={project.shipImage} className={`w-8 h-8 mb-2 rotate-90 ${
                         project.phase === 'P1'
                             ? 'ml-25'
                             : project.phase === 'P2'
@@ -31,9 +45,9 @@ export const ProjectCard = ({ project } : {  project:Project }) => {
                             ? 'ml-85'
                             : 'hidden'
                     }`}/>
-                <img src={project.endImage} className="w-8 h-8 justify-self-end mr-1.5" />
+                <img src={project.planetImage} className="w-8 h-8 justify-self-end mr-1.5" />
             </div>
-            <div className="relative mb-6">
+            <div className="relative mb-12">
                 <div className="flex items-center gap-x-1">
                     <div className={`w-full h-2.5 flex flex-col justify-center overflow-hidden ${project.phase === 'P1' || project.phase === 'P2' || project.phase === 'P3' || project.phase === 'P4' ? "bg-blue-700" : "bg-gray-300"} text-xs text-white text-center whitespace-nowrap transition duration-500`}
                         role="progressbar"
@@ -89,7 +103,7 @@ export const ProjectCard = ({ project } : {  project:Project }) => {
             </div>
             {project.phase === 'P4' && (
                 <div className="flex justify-end relative -top-12">
-                    <img src={project.image} className="w-8 h-8 rotate-90 absolute mr-1" style={{ zIndex: 10 }}/>
+                    <img src={project.shipImage} className="w-8 h-8 rotate-90 absolute mr-1" style={{ zIndex: 10 }}/>
                 </div>
             )}
             <div className="flex items-center justify-center mb-4">
@@ -111,7 +125,6 @@ export const ProjectCard = ({ project } : {  project:Project }) => {
                     );
                 })}
             </div>
-
             <a href={project.link} className="text-blue-400 hover:underline">View Project</a>
         </div>
     );

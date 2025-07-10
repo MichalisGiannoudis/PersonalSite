@@ -1,10 +1,11 @@
 export interface Project {
     title: string,
-    image: string,
-    endImage: string,
+    shipImage: string,
+    planetImage: string,
     description: string,
     phase: string,
     skills: string,
+    screens: string,
     link: string,
 }
 
