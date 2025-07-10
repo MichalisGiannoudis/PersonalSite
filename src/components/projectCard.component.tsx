@@ -16,9 +16,8 @@ export const ProjectCard = ({ title, image, endImage, description, phase, link }
     }
 
     return (
-        <div className="bg-gray-900/30 rounded-xl p-6 border border-gray-700/50 hover:shadow-lg transition-shadow duration-300">
-            <h3 className="text-xl font-semibold mb-4">{title}</h3>
-            <p className="text-lg font-semibold mb-4">Project Progress</p>
+        <div className="bg-gray-900/20 rounded-xl p-6 border border-gray-700/50 hover:shadow-lg transition-shadow duration-300">
+            <h3 className="text-xl font-semibold mb-8">{title}</h3>
             <div className={`grid ${phase === 'P4' ? 'grid-cols-1 justify-end' : 'grid-cols-2'}`}>
                 <img src={image} className={`w-8 h-8 mb-2 rotate-90 ${
                         phase === 'P1'

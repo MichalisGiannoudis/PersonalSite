@@ -12,7 +12,15 @@ export const projects = [
         image: "./empire-ship.png",
         endImage: "./mercury-planet.png",
         description: "An epic journey begins with a single line of code.",
-        phase: "P1",
+        phase: "P2",
+        link: "#",
+    },
+    {
+        title: "Interactive Forest",
+        image: "./empire-ship.png",
+        endImage: "./mercury-planet.png",
+        description: "An epic journey begins with a single line of code.",
+        phase: "P4",
         link: "#",
     },
 ];

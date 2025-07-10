@@ -20,6 +20,33 @@ export const Portfolio = () => {
                         <div className="h-0.5 flex-1 bg-gradient-to-l from-transparent to-white/40"></div>
                     </div>
                 </div>
+                <div className="grid grid-cols-5 gap-6 mb-12">
+                    <div className="group relative bg-gradient-to-br from-blue-900/40 to-blue-700/40 border border-blue-500/30 rounded-lg p-6 text-center hover:bg-gradient-to-br hover:from-blue-800/60 hover:to-blue-600/60 hover:border-blue-400/50 transition-all duration-300 cursor-pointer">
+                        <div className="text-lg font-bold text-white mb-2">Start</div>
+                        <div className="text-sm text-blue-200">Foundation</div>
+                        <div className="text-xs text-blue-100/80 mt-1">Plan & Research</div>
+                    </div>
+                    <div className="group relative bg-gradient-to-br from-green-900/40 to-green-700/40 border border-green-500/30 rounded-lg p-6 text-center hover:bg-gradient-to-br hover:from-green-800/60 hover:to-green-600/60 hover:border-green-400/50 transition-all duration-300 cursor-pointer">
+                        <div className="text-lg font-bold text-white mb-2">Phase 2</div>
+                        <div className="text-sm text-green-200">Development</div>
+                        <div className="text-xs text-green-100/80 mt-1">Design</div>
+                    </div>
+                    <div className="group relative bg-gradient-to-br from-purple-900/40 to-purple-700/40 border border-purple-500/30 rounded-lg p-6 text-center hover:bg-gradient-to-br hover:from-purple-800/60 hover:to-purple-600/60 hover:border-purple-400/50 transition-all duration-300 cursor-pointer">
+                        <div className="text-lg font-bold text-white mb-2">Phase 3</div>
+                        <div className="text-sm text-purple-200">Deployment</div>
+                        <div className="text-xs text-purple-100/80 mt-1">Build</div>
+                    </div>
+                    <div className="group relative bg-gradient-to-br from-orange-900/40 to-orange-700/40 border border-orange-500/30 rounded-lg p-6 text-center hover:bg-gradient-to-br hover:from-orange-800/60 hover:to-orange-600/60 hover:border-orange-400/50 transition-all duration-300 cursor-pointer">
+                        <div className="text-lg font-bold text-white mb-2">Phase 4</div>
+                        <div className="text-sm text-orange-200">Evolution</div>
+                        <div className="text-xs text-orange-100/80 mt-1">Optimize & Expand</div>
+                    </div>
+                    <div className="group relative bg-gradient-to-br from-red-900/40 to-red-700/40 border border-red-500/30 rounded-lg p-6 text-center hover:bg-gradient-to-br hover:from-red-800/60 hover:to-red-600/60 hover:border-red-400/50 transition-all duration-300 cursor-pointer">
+                        <div className="text-lg font-bold text-white mb-2">End</div>
+                        <div className="text-sm text-red-200">Legacy</div>
+                        <div className="text-xs text-red-100/80 mt-1">Deploy</div>
+                    </div>
+                </div>
                 <div className="grid grid-cols-2 gap-8">
                     { projects.map((project, index) => 
                         <ProjectCard 
