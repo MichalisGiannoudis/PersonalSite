@@ -21,7 +21,7 @@ export const ProjectCard = ({ project } : {  project:Project }) => {
     return (
         <div className="bg-gray-900/20 rounded-xl p-6 border border-gray-700/50 hover:shadow-lg transition-shadow duration-300">
             <h3 className="text-xl font-semibold mb-8">{project.title}</h3>
-            <div className={`grid ${project.phase === 'P4' ? 'grid-cols-1 justify-end' : 'grid-cols-2'}`}>
+            <div className={`grid ${project.phase === 'P4' ? 'grid-cols-1 justify-end mb-1.5' : 'grid-cols-2'}`}>
                 <img src={project.image} className={`w-8 h-8 mb-2 rotate-90 ${
                         project.phase === 'P1'
                             ? 'ml-25'
@@ -87,6 +87,11 @@ export const ProjectCard = ({ project } : {  project:Project }) => {
                     </div>
                 </div>
             </div>
+            {project.phase === 'P4' && (
+                <div className="flex justify-end relative -top-12">
+                    <img src={project.image} className="w-8 h-8 rotate-90 absolute mr-1" style={{ zIndex: 10 }}/>
+                </div>
+            )}
             <div className="flex items-center justify-center mb-4">
                 <p className="text-lg font-medium mb-2">Mission</p>
                 <div className="flex-1 h-0.5 bg-gradient-to-l from-transparent to-white/40 ml-4"></div>
