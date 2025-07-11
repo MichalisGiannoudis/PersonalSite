@@ -8,7 +8,7 @@ interface ExperienceCardProps {
 export const ExperienceCard = ({ episode, position }: ExperienceCardProps) => {
     return(
         <div className={`flex-1 ${position === 'left' ? 'text-right pr-8' : 'pl-8'}`}>
-            <div className="bg-slate-900/70 rounded-lg p-6 border border-slate-700/50 relative">
+            <div className="bg-slate-900/20 rounded-lg p-6 border border-slate-700/50 relative">
                 <div className="flex items-center gap-6">
                     <div className={position === 'left' ? 'w-1/3' : 'w-3/5'}>
                         {position === 'left' ? (

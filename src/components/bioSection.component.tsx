@@ -16,7 +16,7 @@ export const BioSection = () => {
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
                     <div className="space-y-8">
-                        <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50">
+                        <div className="bg-slate-900/20 rounded-xl p-8 border border-gray-700/50">
                             <p className="text-lg leading-relaxed mb-8">
                                 Hello! I'm Mike, an experienced Software Engineer with over 3 years of experience, holding a degree in Computer 
                                 Science from the University of Crete, specialized in C#  and web APIs. Known for delivering projects on time and taking 
@@ -45,13 +45,13 @@ export const BioSection = () => {
                             </div>
                         </div>
                         <div className="grid grid-cols-2 gap-6 w-full max-w-sm">
-                            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 text-center">
+                            <div className="bg-slate-900/20 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 text-center">
                                 <div className="text-3xl font-bold text-blue-400 mb-2">3+</div>
                                 <div className="text-sm text-gray-300">Years Experience</div>
                             </div>
-                            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 text-center">
+                            <div className="bg-slate-900/20 rounded-xl p-6 border border-gray-700/50 text-center">
                                 <div className="text-3xl font-bold text-purple-400 mb-2">20+</div>
-                                <div className="text-sm text-gray-300">Projects Completed</div>
+                                <div className="text-sm text-gray-300">Projects Running<br/>Completed</div>
                             </div>
                         </div>
                     </div>
