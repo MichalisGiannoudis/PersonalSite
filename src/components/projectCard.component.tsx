@@ -30,7 +30,11 @@ export const ProjectCard = ({ project } : {  project:Project }) => {
                             mobile: "/screens/mobile-icon.png"
                         };
                         return (
-                            <img key={screen} src={icons[screen]} className={`w-6 h-6${screen === "tablet" ? " -mr-1.5" : ""}`}/>
+                            <img
+                                key={screen}
+                                src={icons[screen]}
+                                className={`w-6 h-6${screen === "tablet" ? " -mr-1.5" : ""}`}
+                            />
                         );
                     })}
                 </div>
@@ -102,7 +106,7 @@ export const ProjectCard = ({ project } : {  project:Project }) => {
                 </div>
             </div>
             {project.phase === 'P4' && (
-                <div className="flex justify-end relative -top-12">
+                <div className="flex justify-end relative -top-18">
                     <img src={project.shipImage} className="w-8 h-8 rotate-90 absolute mr-1" style={{ zIndex: 10 }}/>
                 </div>
             )}

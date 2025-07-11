@@ -41,7 +41,7 @@ export const TimeLine = () => {
                     <div className="h-0.5 flex-1 bg-gradient-to-l from-transparent to-white/40"></div>
                 </div>
             </div>
-            <div className="bg-gray-900/30 rounded-xl p-8 border border-gray-700/50 relative min-h-[800px] overflow-hidden mb-16">            
+            <div className="p-8 relative min-h-[800px] overflow-hidden mb-12">            
                 {visualize && (
                     <div className={`absolute inset-0 flex items-center justify-center animate-fade-in-crawl`}>
                         <StarWars isPlaying={visualize}/>

@@ -2,7 +2,7 @@ export const projects = [
     {
         title: "Project Drew",
         shipImage: "./ships/wing-starfighter.png",
-        planetImage: "./planets/neptune-planet.png",
+        planetImage: "./planets/mars-planet.png",
         description: "A personal site for a lawyer.",
         phase: "P3",
         skills: "React, TypeScript, Tailwind, Git, Figma",
@@ -22,7 +22,7 @@ export const projects = [
     {
         title: "InstaMe",
         shipImage: "./ships/rebellion-ship.png",
-        planetImage: "./planets/mercury-planet.png",
+        planetImage: "./planets/uranus-planet.png",
         description: "Instagram dashboard.",
         phase: "P1",
         skills: "React, TypeScript, Tailwind, Node.js, MongoDB, Postman, Git, Figma",
@@ -32,7 +32,7 @@ export const projects = [
     {
         title: "Interactive Forest",
         shipImage: "./ships/lambda-class-shuttle-1.png",
-        planetImage: "./planets/mercury-planet.png",
+        planetImage: "./planets/venus-planet.png",
         description: "An interactive experience through a forest",
         phase: "P4",
         skills: "TypeScript, Tailwind, Git, Figma",
