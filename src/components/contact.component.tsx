@@ -1,9 +1,11 @@
 'use client'
 
+import { ContactForm } from "./contactForm.component"
+
 export const Contact = () => {
     
     return (
-        <div id="contact-section" className="bg-black text-white py-16 px-8 relative">
+        <div id="contact-section" className="bg-black text-white py-8 px-8 relative">
             <div className="stars-background">
                 <div className="blinking-stars"></div>
                 <div className="blinking-stars-2"></div>
@@ -26,8 +28,9 @@ export const Contact = () => {
                 </div>
                 <div className="flex flex-col items-center space-y-4">
                 </div>
-                <div className="flex flex-col items-center space-y-4 mb-4">
-                    <p className="text-lg text-white">Social</p>
+                <div className="flex flex-col items-center space-y-4">
+                    <ContactForm />
+                    <p className="text-lg text-white">Socials</p>
                     <div className="flex space-x-6">
                         <a href="https://github.com/michalisgiannoudis" className="hover:text-amber-400 transition-colors" aria-label="GitHub" target="_blank">
                             <img className="w-10 h-10 transition-colors duration-200" src="/social/github-icon.png" alt="GitHub Icon"
@@ -43,7 +46,6 @@ export const Contact = () => {
                         </a>
                     </div>
                 </div>
-                <p className="text-center text-lg font-bold text-amber-500">May the code be with you</p>
             </div>
         </div>
     )
