@@ -1,4 +1,7 @@
+'use client'
+
 export const Contact = () => {
+    
     return (
         <div id="contact-section" className="bg-black text-white py-16 px-8 relative">
             <div className="stars-background">
@@ -22,9 +25,25 @@ export const Contact = () => {
                     <p className="text-lg text-white">You can contact me via email or connect with me on social media.</p>
                 </div>
                 <div className="flex flex-col items-center space-y-4">
-
                 </div>
-                <p className="text-center text-lg font-bold text-amber-500 mb-12">May the code be with you</p>
+                <div className="flex flex-col items-center space-y-4 mb-4">
+                    <p className="text-lg text-white">Social</p>
+                    <div className="flex space-x-6">
+                        <a href="https://github.com/michalisgiannoudis" className="hover:text-amber-400 transition-colors" aria-label="GitHub" target="_blank">
+                            <img className="w-10 h-10 transition-colors duration-200" src="/social/github-icon.png" alt="GitHub Icon"
+                                onMouseOver={e => (e.currentTarget.style.filter = "brightness(0) saturate(100%) invert(92%) sepia(93%) saturate(1000%) hue-rotate(310deg)")}
+                                onMouseOut={e => (e.currentTarget.style.filter = "invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg)")}
+                            />
+                        </a>
+                        <a href="https://linkedin.com/in/michalisgiannoudis" className="hover: transition-colors" aria-label="LinkedIn" target="_blank">
+                            <img className="w-10 h-10 transition-colors duration-200" src="/social/linkedin-icon.png" alt="LinkedIn Icon"
+                                onMouseOver={e => (e.currentTarget.style.filter = "brightness(0) saturate(100%) invert(92%) sepia(93%) saturate(1000%) hue-rotate(310deg)")}
+                                onMouseOut={e => (e.currentTarget.style.filter = "invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg)")}
+                            />
+                        </a>
+                    </div>
+                </div>
+                <p className="text-center text-lg font-bold text-amber-500">May the code be with you</p>
             </div>
         </div>
     )

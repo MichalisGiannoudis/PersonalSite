@@ -1,5 +1,5 @@
 'use client'
-import { episodes } from "@/types/timelineEpisodes";
+import { episodes } from "@/content/episodes";
 import { useEffect, useState } from "react";
 import "../styles/starWars.css";
 

@@ -1,5 +1,4 @@
 import { TimeLine } from "./timeline.component";
-import { Skills } from "./skills.component";
 import { Skills2 } from "./skills2.component";
 
 export const BioSection = () => {
@@ -11,7 +10,7 @@ export const BioSection = () => {
                 <div className="blinking-stars-3"></div>
             </div>
             
-            <div className="max-w-6xl mx-auto relative z-10">
+            <div className="w-[85%] mx-auto relative z-10">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl font-bold mb-6">So, who is Mike?</h2>
                 </div>

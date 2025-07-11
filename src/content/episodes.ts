@@ -1,8 +1,10 @@
 export const episodes = [
     {
-        title: "Episode I: The Awakening",
         company: "Universe Corse",
+        role: "Junior Software Engineer",
         period: "Feb 2022 - Apr 2023",
+        description: "A journey through the early days of web development, mastering the fundamentals and laying the groundwork for future adventures",
+        title: "Episode I: The Awakening",
         story: [
             "A long time ago in a galaxy far, far away....",
             "A young padawan developer first discovered the ancient ways of the web. In the digital realm of Universe Corse, they learned to harness the power of JavaScript and bend HTML to their will.",
@@ -12,9 +14,11 @@ export const episodes = [
         ]
     },
     {
-        title: "Episode II: The VR Conquest",
         company: "ORamaVR",
+        role: "Software Engineer",
         period: "May 2023 - Jun 2025",
+        description: "An epic saga of virtual reality adventures, where the hero learns to create immersive experiences that transport users to new dimensions",
+        title: "Episode II: The VR Conquest",
         story: [
             "The force was strong with this one....",
             "Having mastered the ways of traditional web development, our hero ventured into the mystical realm of Virtual Reality. At ORamaVR, they discovered new dimensions of possibility.",
@@ -24,9 +28,11 @@ export const episodes = [
         ]
     },
     {
-        title: "Episode III: The Full Stack Mastery",
         company: "Pircel",
+        role: "Full Stack Engineer",
         period: "May 2025 - Present",
+        description: "The culmination of the hero's journey, where they become a master of both frontend and backend technologies, shaping the future of web development",
+        title: "Episode III: The Full Stack Mastery",
         story: [
             "The chosen one has arrived....",
             "Now a master of both realms - web and virtual - our developer ascended to the highest echelons of the coding galaxy. At Pircel, they embraced the full spectrum of technological power.",
