@@ -24,7 +24,7 @@ export const Contact = () => {
                 <div className="flex flex-col items-center space-y-4">
 
                 </div>
-                <p className="text-center text-lg font-bold text-amber-500 mb-12">May the forth be with you</p>
+                <p className="text-center text-lg font-bold text-amber-500 mb-12">May the code be with you</p>
             </div>
         </div>
     )

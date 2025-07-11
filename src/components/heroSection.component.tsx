@@ -32,7 +32,7 @@ export const HeroSection = () => {
                     Mike's Space
                 </p>
                 <p className="text-xl md:text-2xl text-blue-100/90 mb-8 leading-relaxed transform transition-all duration-1000 ease-out animate-[fadeUp_1s_ease-out_0.6s_both]">
-                    Crafting digital experiences with passion and precision.<br />Let's build something amazing together.
+                    Crafting digital experiences with passion.
                 </p>
             </div>
         </div>       

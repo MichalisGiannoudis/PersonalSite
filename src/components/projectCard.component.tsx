@@ -1,5 +1,5 @@
 import { Project } from "@/types/projects.type";
-import { nonTechnicalSkills, technicalSkills } from "@/types/skills";
+import { frontendSkills, coreSkills, backendSkills } from "@/types/skills";
 
 export const ProjectCard = ({ project } : {  project:Project }) => {
 
@@ -121,7 +121,7 @@ export const ProjectCard = ({ project } : {  project:Project }) => {
             </div>
             <div className="flex flex-wrap gap-2 mb-8">
                 {project.skills.split(',').map(skill => skill.trim()).map((skill, idx) => {
-                    const foundSkill = [...technicalSkills, ...nonTechnicalSkills].find((s: { name: string }) => s.name === skill);
+                    const foundSkill = [...frontendSkills, ...coreSkills, ...backendSkills].find((s: { name: string }) => s.name === skill);
                     return (
                         <div key={skill + idx} className="flex items-center justify-center w-8 h-8 p-1.5 rounded-full bg-gray-800 border border-gray-600 shadow-sm">
                             <img src={foundSkill ? foundSkill.icon : skill} className="text-sm text-white" />
