@@ -85,7 +85,7 @@ export const ProjectCard = ({ project } : {  project:Project }) => {
                 </div>
 
                 <div className="grid grid-cols-[5%_85%_10%] mb-4">
-                    <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-center mr-3">
                         <div className={`w-3 h-3 bg-blue-700 rounded-full`}></div>
                         <span className="text-xs text-gray-400 mt-1"> Start </span>
                     </div>
