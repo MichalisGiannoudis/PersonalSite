@@ -3,6 +3,8 @@ import emailjs from '@emailjs/browser';
 
 export const ContactForm = () => {
 
+    const [emailError, setEmailError] = useState<string | null>(null);
+    const [emailSent, setEmailSent] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const onEmailSend = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -27,13 +29,12 @@ export const ContactForm = () => {
                     publicKey: process.env.NEXT_PUBLIC_EMAIL_KEY!
                 }
             );
-            console.log('Email sent successfully:', result.text);
-            alert('Message sent successfully!');
             form.reset();
         } catch (error) {
-            console.error('Failed to send email:', error);
-            alert('Failed to send message. Please try again.');
+            setEmailError(error as string);
+            setEmailSent(false);
         } finally {
+            setEmailSent(true);
             setIsSubmitting(false);
         }
     }
@@ -59,10 +60,14 @@ export const ContactForm = () => {
                     <label htmlFor="message" className="block text-sm font-medium mb-1">Message</label>
                     <textarea id="message" name="message" required rows={4} className="w-full p-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-purple-800"></textarea>
                 </div>
-                <button disabled={isSubmitting} type="submit" className="w-full bg-purple-800/50 hover:bg-amber-600/70 text-white font-bold py-2 px-4 rounded transition-colors">
+                <button disabled={isSubmitting || emailSent} type="submit" className="w-full bg-purple-800/50 hover:bg-amber-600/70 text-white font-bold py-2 px-4 rounded transition-colors">
                 { isSubmitting ? 'Sending message...' : 'Send Message' }    
                 </button>
             </form>
+            { emailSent && <div className="flex justify-center mt-4 bg-backdrop-blur-4xl">
+                {!emailError && <p className="text-red-500 text-sm">Something went wrong, try again later!</p>}
+                {emailSent && !emailError && <p className="text-green-500 text-sm">Email sent successfully!</p>}
+            </div>}
         </div>
     );
 }
