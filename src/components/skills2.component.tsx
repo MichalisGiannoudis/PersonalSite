@@ -9,6 +9,7 @@ export const Skills2 = () => {
     const [coreSystmeInfo, setCoreSystemInfo] = useState<boolean>(false);
     const [backSystmeInfo, setBackSystemInfo] = useState<boolean>(false);
     const [randomBool, setRandomBool] = useState<boolean>(false);
+    const [isClient, setIsClient] = useState<boolean>(false);
 
     const startRandomBoolInterval = (intervalMs: number = 2000, probability: number = 0.3) => {
         const interval = setInterval(() => {
@@ -19,7 +20,26 @@ export const Skills2 = () => {
         return interval;
     };
 
+    const getCirclePosition = (index: number, total: number, group: number) => {
+        const angle = (index * 360) / total;
+        let radius = 200;
+        if (isClient) {
+            const width = window.innerWidth;
+            if (width < 640) {
+            radius = group === 1 ? 120 : 160;
+            } else if (width < 1024) {
+            radius = group === 1 ? 160 : 200;
+            } else {
+            radius = group === 1 ? 160 : 200;
+            }
+        }
+        const x = Math.cos((angle - 90) * Math.PI / 180) * radius;
+        const y = Math.sin((angle - 90) * Math.PI / 180) * radius;
+        return { x, y };
+    }
+
     useEffect(() => {
+        setIsClient(true);
         const interval = startRandomBoolInterval(3000, 0.3);
         
         return () => {
@@ -39,7 +59,7 @@ export const Skills2 = () => {
                     <div className="h-0.5 flex-1 bg-gradient-to-l from-transparent to-white/40"></div>
                 </div>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-60 lg:min-h-[500px]">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-45 lg:gap-60 min-h-[1000px] lg:min-h-[500px]">
 
                 <div className="relative flex items-center justify-center lg:mb-30" onMouseEnter={() => setFrontSystemInfo(true)} onMouseLeave={() => setFrontSystemInfo(false)}>
                     
@@ -55,13 +75,9 @@ export const Skills2 = () => {
                         </p>
                     </div> }
                     
-                    <div className="absolute w-80 h-80 border-2 border-blue-500/30 rounded-full animate-spin-slow">
+                    <div className="absolute w-60 h-60 md:w-80 md:h-80 border-2 border-blue-500/30 rounded-full animate-spin-slow">
                         {frontendSkills.map((skill, index) => {
-                            const angle = (index * 360) / frontendSkills.length;
-                            const radius = 150;
-                            const x = Math.cos((angle - 90) * Math.PI / 180) * radius;
-                            const y = Math.sin((angle - 90) * Math.PI / 180) * radius;
-                            
+                            const { x, y } = getCirclePosition(index, frontendSkills.length, 1);
                             return (
                                 <div key={skill.name} className="absolute w-12 h-12 group animate-spin"
                                     style={{left: `calc(50% + ${x}px - 24px)`, top: `calc(50% + ${y}px - 24px)`, animation: 'spin-slow 60s linear infinite reverse'}}>
@@ -94,13 +110,9 @@ export const Skills2 = () => {
                         </p>
                     </div> }
 
-                    <div className="absolute w-100 h-100 border-2 border-purple-500/30 rounded-full animate-spin-reverse-slow">
+                    <div className="absolute w-80 h-80 md:w-100 md:h-100 border-2 border-purple-500/30 rounded-full animate-spin-reverse-slow">
                         {coreSkills.map((skill, index) => {
-                            const angle = (index * 360) / coreSkills.length;
-                            const radius = 200;
-                            const x = Math.cos((angle - 90) * Math.PI / 180) * radius;
-                            const y = Math.sin((angle - 90) * Math.PI / 180) * radius;
-                            
+                            const { x, y } = getCirclePosition(index, coreSkills.length, 2);
                             return (
                                 <div key={skill.name} className="absolute w-10 h-10 group"
                                     style={{left: `calc(50% + ${x}px - 20px)`, top: `calc(50% + ${y}px - 20px)`, animation: 'spin-reverse-slow 55s linear infinite reverse'}}>
@@ -133,13 +145,9 @@ export const Skills2 = () => {
                         </p>
                     </div> }
 
-                    <div className="absolute w-80 h-80 border-2 border-blue-500/30 rounded-full animate-spin-slow">
+                    <div className="absolute w-60 h-60 md:w-80 md:h-80 border-2 border-blue-500/30 rounded-full animate-spin-slow">
                         {backendSkills.map((skill, index) => {
-                            const angle = (index * 360) / backendSkills.length;
-                            const radius = 150;
-                            const x = Math.cos((angle - 90) * Math.PI / 180) * radius;
-                            const y = Math.sin((angle - 90) * Math.PI / 180) * radius;
-                            
+                            const { x, y } = getCirclePosition(index, backendSkills.length, 1);
                             return (
                                 <div key={skill.name} className="absolute w-12 h-12 group"
                                     style={{left: `calc(50% + ${x}px - 24px)`, top: `calc(50% + ${y}px - 24px)`, animation: 'spin-slow 60s linear infinite reverse'}}>
