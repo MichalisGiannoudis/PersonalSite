@@ -43,9 +43,9 @@ export const TimeLine = () => {
                     <div className="h-0.5 flex-1 bg-gradient-to-l from-transparent to-white/40"></div>
                 </div>
             </div>
-            <div className="p-8 relative min-h-[1200px] lg:min-h-[800px] overflow-hidden">            
+            <div className={`p-8 relative ${visualize ? 'min-h-[800px]' : 'min-h-[1200px]'} lg:min-h-[800px] overflow-hidden`}>            
                 {visualize && (
-                    <div className={`absolute inset-0 flex items-center justify-center animate-fade-in-crawl`}>
+                    <div className={`absolute h-155 inset-0 flex items-center justify-center animate-fade-in-crawl`}>
                         <StarWars isPlaying={visualize}/>
                     </div>
                 )}
