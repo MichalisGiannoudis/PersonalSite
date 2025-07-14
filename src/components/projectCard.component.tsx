@@ -30,11 +30,7 @@ export const ProjectCard = ({ project } : {  project:Project }) => {
                             mobile: "/screens/mobile-icon.png"
                         };
                         return (
-                            <img
-                                key={screen}
-                                src={icons[screen]}
-                                className={`w-6 h-6${screen === "tablet" ? " -mr-1.5" : ""}`}
-                            />
+                            <img key={screen} src={icons[screen]} className={`w-6 h-6${screen === "tablet" ? " -mr-1.5" : ""}`}/>
                         );
                     })}
                 </div>
@@ -42,11 +38,11 @@ export const ProjectCard = ({ project } : {  project:Project }) => {
             <div className={`grid ${project.phase === 'P4' ? 'grid-cols-1 justify-end mb-1.5' : 'grid-cols-2'}`}>
                 <img src={project.shipImage} className={`w-8 h-8 mb-2 rotate-90 ${
                         project.phase === 'P1'
-                            ? 'ml-25'
+                            ? 'ml-12 md:18 lg:ml-25'
                             : project.phase === 'P2'
-                            ? 'ml-56'
+                            ? 'ml-26 md:41 lg:ml-56'
                             : project.phase === 'P3'
-                            ? 'ml-85'
+                            ? 'ml-42.5 md:62 lg:ml-85'
                             : 'hidden'
                     }`}/>
                 <img src={project.planetImage} className="w-8 h-8 justify-self-end mr-1.5" />
@@ -90,15 +86,15 @@ export const ProjectCard = ({ project } : {  project:Project }) => {
                         <span className="text-xs text-gray-400 mt-1"> Start </span>
                     </div>
                     <div className="grid grid-cols-3">
-                        <div className="flex flex-col items-center ml-9">
+                        <div className="flex flex-col items-center ml-2 lg:ml-9">
                             <div className={`w-3 h-3 ${project.phase === 'P1' || project.phase === 'P2' || project.phase === 'P3' || project.phase === 'P4' ? "bg-blue-700" : "bg-gray-300"} rounded-full`}></div>
                             <span className="text-xs text-gray-400 mt-1 whitespace-nowrap"> Phase 1 </span>
                         </div>
-                        <div className="flex flex-col items-center mr-4">
+                        <div className="flex flex-col items-center mr-7.5 lg:mr-4">
                             <div className={`w-3 h-3 ${project.phase === 'P2' || project.phase === 'P3' || project.phase === 'P4' ? "bg-blue-700" : "bg-gray-300"} rounded-full`}></div>
                             <span className="text-xs text-gray-400 mt-1 whitespace-nowrap"> Phase 2 </span>
                         </div>
-                        <div className="flex flex-col items-center mr-18">
+                        <div className="flex flex-col items-center mr-17 lg:mr-18">
                             <div className={`w-3 h-3 ${project.phase === 'P3' || project.phase === 'P4' ? "bg-blue-700" : "bg-gray-300"} rounded-full`}></div>
                             <span className="text-xs text-gray-400 mt-1 whitespace-nowrap"> Phase 3 </span>
                         </div>

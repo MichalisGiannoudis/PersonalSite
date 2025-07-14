@@ -20,7 +20,7 @@ export const Portfolio = () => {
                         <div className="h-0.5 flex-1 bg-gradient-to-l from-transparent to-white/40"></div>
                     </div>
                 </div>
-                <div className="grid grid-cols-5 gap-6 mb-12">
+                <div className="hidden lg:grid grid-cols-5 gap-6 mb-12">
                     <div className="group relative bg-gray-900/20 border border-gray-700/50 rounded-lg p-6 text-center hover:bg-gradient-to-br hover:from-blue-800/60 hover:to-blue-600/60 hover:border-blue-400/50 transition-all duration-300 cursor-pointer">
                         <div className="text-lg font-bold text-white mb-2">Start</div>
                         <div className="text-sm text-blue-200">Foundation</div>
