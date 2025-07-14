@@ -26,7 +26,7 @@ export const Skills2 = () => {
         if (isClient) {
             const width = window.innerWidth;
             if (width < 640) {
-            radius = group === 1 ? 120 : 160;
+            radius = group === 1 ? 120 : 130;
             } else if (width < 1024) {
             radius = group === 1 ? 160 : 200;
             } else {
@@ -49,7 +49,7 @@ export const Skills2 = () => {
     
     return (
         <>
-            <div className="text-center mb-16">
+            <div className="text-center mb-16 md:mb-24">
                 <div className="flex items-center justify-center mb-6">
                     <p className="text-4xl font-bold mx-4 whitespace-nowrap">My Universe</p>
                 </div>
@@ -59,22 +59,18 @@ export const Skills2 = () => {
                     <div className="h-0.5 flex-1 bg-gradient-to-l from-transparent to-white/40"></div>
                 </div>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-45 lg:gap-60 min-h-[1000px] lg:min-h-[500px]">
-
-                <div className="relative flex items-center justify-center lg:mb-30" onMouseEnter={() => setFrontSystemInfo(true)} onMouseLeave={() => setFrontSystemInfo(false)}>
-                    
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-45 md:gap-60 min-h-[1000px] md:min-h-[1200px] lg:min-h-[500px]">
+                <div className="relative flex items-center justify-center md:ml-40 lg:mb-30" onMouseEnter={() => setFrontSystemInfo(true)} onMouseLeave={() => setFrontSystemInfo(false)}>
                     { !frontSystmeInfo && <div className="flex items-center justify-center z-10 w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full shadow-2xl shadow-yellow-400/50">
                         <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full animate-pulse">
                         </div>
                     </div> }
-
-                    { frontSystmeInfo && <div className="flex items-center justify-center w-50 h-20 bg-gradient-to-br from-gray-700/30 to-indigo-800/30 rounded-lg shadow-xl shadow-purple-400/50 border-1 border-indigo-500/30">
+                    { frontSystmeInfo && <div className="overflow-x-hidden flex items-center justify-center w-50 h-20 bg-gradient-to-br from-gray-700/30 to-indigo-800/30 rounded-lg shadow-xl shadow-purple-400/50 border-1 border-indigo-500/30">
                         <p className={`text-sm text-center glitch-effect ${randomBool ? 'text-red-500' : 'text-white'}`} data-text="System: Core Skills">
                             {randomBool ? "System: UNKNOWN" : "System: FrontEnd Skills"} <br/> 
                             {randomBool ? "Status: ERROR 404" : "Status: Stable"}
                         </p>
                     </div> }
-                    
                     <div className="absolute w-60 h-60 md:w-80 md:h-80 border-2 border-blue-500/30 rounded-full animate-spin-slow">
                         {frontendSkills.map((skill, index) => {
                             const { x, y } = getCirclePosition(index, frontendSkills.length, 1);
@@ -97,20 +93,17 @@ export const Skills2 = () => {
                 </div>
                 
                 <div className="relative flex items-center justify-center" onMouseEnter={() => setCoreSystemInfo(true)} onMouseLeave={() => setCoreSystemInfo(false)}>
-                    
                     { !coreSystmeInfo && <div className="flex items-center justify-center z-10 w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full shadow-2xl shadow-yellow-400/50">
                         <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full animate-pulse">
                         </div>
                     </div> }
-
                     { coreSystmeInfo && <div className="flex items-center justify-center w-55 h-20 bg-gradient-to-br from-purple-800/30 to-amber-800/30 rounded-lg shadow-xl shadow-indigo-500/50 border-1 border-amber-500/30">
-                        <p className={`text-sm  text-center glitch-effect ${randomBool ? 'text-red-500' : 'text-white'}`} data-text="System: Core Skills">
+                        <p className={`text-sm text-center glitch-effect ${randomBool ? 'text-red-500' : 'text-white'}`} data-text="System: Core Skills">
                             {randomBool ? "System: UNKNOWN" : "System: Core Skills"} <br/> 
                             {randomBool ? "Status: ERROR 404" : "Status: Stable"}
                         </p>
                     </div> }
-
-                    <div className="absolute w-80 h-80 md:w-100 md:h-100 border-2 border-purple-500/30 rounded-full animate-spin-reverse-slow">
+                    <div className="absolute w-65 h-65 md:w-100 md:h-100 border-2 border-purple-500/30 rounded-full animate-spin-reverse-slow">
                         {coreSkills.map((skill, index) => {
                             const { x, y } = getCirclePosition(index, coreSkills.length, 2);
                             return (
@@ -131,20 +124,17 @@ export const Skills2 = () => {
                     </div>
                 </div>
 
-                <div className="relative flex items-center justify-center lg:-mb-65" onMouseEnter={() => setBackSystemInfo(true)} onMouseLeave={() => setBackSystemInfo(false)}>
-                    
+                <div className="relative flex items-center justify-center md:mr-60 lg:-mb-65" onMouseEnter={() => setBackSystemInfo(true)} onMouseLeave={() => setBackSystemInfo(false)}>
                     { !backSystmeInfo && <div className="flex items-center justify-center z-10 w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full shadow-2xl shadow-yellow-400/50">
                         <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full animate-pulse">
                         </div>
                     </div> }
-
                     { backSystmeInfo && <div className="flex items-center justify-center w-55 h-20 bg-gradient-to-br from-amber-700/30 to-indigo-800/30 rounded-lg shadow-xl shadow-purple-400/50 border-1 border-indigo-500/30">
                         <p className={`text-sm text-center glitch-effect ${randomBool ? 'text-red-500' : 'text-white'}`} data-text="System: Core Skills">
                             {randomBool ? "System: UNKNOWN" : "System: BackEnd Skills"} <br/> 
                             {randomBool ? "Status: ERROR 404" : "Status: Stable"}
                         </p>
                     </div> }
-
                     <div className="absolute w-60 h-60 md:w-80 md:h-80 border-2 border-blue-500/30 rounded-full animate-spin-slow">
                         {backendSkills.map((skill, index) => {
                             const { x, y } = getCirclePosition(index, backendSkills.length, 1);
@@ -165,7 +155,6 @@ export const Skills2 = () => {
                         })}
                     </div>
                 </div>
-
             </div>
         </>
     )

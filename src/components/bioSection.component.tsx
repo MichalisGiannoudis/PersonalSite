@@ -50,8 +50,8 @@ export const BioSection = () => {
                                 <div className="text-sm text-gray-300">Years Experience</div>
                             </div>
                             <div className="bg-slate-900/20 rounded-xl p-6 border border-gray-700/50 text-center">
-                                <div className="text-3xl font-bold text-purple-400 mb-2">20+</div>
-                                <div className="text-sm text-gray-300">Projects Running<br/>Completed</div>
+                                <div className="text-3xl font-bold text-purple-400 mb-2">4+</div>
+                                <div className="text-sm text-gray-300">Projects Running /<br/>Completed</div>
                             </div>
                         </div>
                     </div>
