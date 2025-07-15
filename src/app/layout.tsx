@@ -11,6 +11,9 @@ const audiowide = Audiowide({
 export const metadata: Metadata = {
   title: "Mike's Space",
   description: "Mike's Space",
+  icons: {
+    icon: "/favicon.ico?v=2",
+  },
 };
 
 export const viewport: Viewport = {
