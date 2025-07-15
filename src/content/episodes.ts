@@ -3,7 +3,7 @@ export const episodes = [
         company: "Universe Corse",
         role: "Junior Software Engineer",
         period: "Feb 2022 - Apr 2023",
-        description: "A journey through the early days of web development, mastering the fundamentals and laying the groundwork for future adventures",
+        description: "Universe Core is a software house specializing in web solutions. I worked on multiple projects throughout the whole development cycle, delivering websites developed in Wordpress and Node.JS.",
         title: "Episode I: The Awakening",
         story: [
             "A long time ago in a galaxy far, far away....",
@@ -17,7 +17,7 @@ export const episodes = [
         company: "ORamaVR",
         role: "Software Engineer",
         period: "May 2023 - Jun 2025",
-        description: "An epic saga of virtual reality adventures, where the hero learns to create immersive experiences that transport users to new dimensions",
+        description: "Responsible for customer projects including the design, implementation, and delivery of a VR simulation & web API, alongside its multiplayer functionality and optimizations, developed in Unity 3D & C#.",
         title: "Episode II: The VR Conquest",
         story: [
             "The force was strong with this one....",
