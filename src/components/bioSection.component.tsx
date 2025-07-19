@@ -25,19 +25,8 @@ export const BioSection = () => {
                     <div className="flex flex-col items-center space-y-8">
                         <div className="relative w-96 h-96 overflow-hidden">
                             <div className="absolute top-8 left-8 w-80 h-80  rounded-full flex items-center justify-center">
-                                {/* <div className="w-64 h-64 bg-gray-700/50 rounded-full flex items-center justify-center"> */}
-                                    <img src="/bio-image.png" alt="Mike" className="w-75 h-75 w-fit rounded-full " />
-                                    {/* <div className="text-6xl font-bold text-gray-400">M</div> */}
-                                {/* </div> */}
+                                <img src="/bio-image.png" alt="Mike" className="w-75 h-75 w-fit rounded-full " />
                             </div>
-                            {/* <div className="absolute inset-8 pointer-events-none">
-                                <div className="absolute inset-0 planet-orbit-1">
-                                    <div className="planet-1 w-8 h-8 bg-blue-500/60 rounded-full border-2 border-blue-400/70 shadow-lg shadow-blue-500/30"></div>
-                                </div>
-                                <div className="absolute inset-0 planet-orbit-2">
-                                    <div className="planet-2 w-6 h-6 bg-purple-500/60 rounded-full border-2 border-purple-400/70 shadow-lg shadow-purple-500/30"></div>
-                                </div>
-                            </div> */}
                         </div>
                         <div className="grid grid-cols-2 gap-6 w-full max-w-sm">
                             <div className="bg-slate-900/20 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 text-center">
