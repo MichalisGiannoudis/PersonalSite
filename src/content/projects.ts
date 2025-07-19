@@ -25,7 +25,7 @@ export const projects = [
         planetImage: "./planets/uranus-planet.png",
         description: "Advanced Notepad.",
         phase: "P1",
-        skills: "React, TypeScript, Tailwind, Node.js, GraphQL, Postman, Git, Figma",
+        skills: "React, TypeScript, Tailwind, Node.js, MongoDB, Postman, Git, Figma",
         screens: "Desktop",
         link: "#",
     },

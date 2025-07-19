@@ -60,7 +60,7 @@ export const Skills = () => {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-45 md:gap-20 min-h-[1000px] md:min-h-[1200px] lg:min-h-[500px]">
 
-               <div className="relative flex items-center justify-center md:ml-40 lg:mb-30" onMouseEnter={() => setFrontSystemInfo(true)} onMouseLeave={() => setFrontSystemInfo(false)}>
+               <div className="relative flex items-center justify-center md:ml-20 lg:mb-30" onMouseEnter={() => setFrontSystemInfo(true)} onMouseLeave={() => setFrontSystemInfo(false)}>
                     { !frontSystemInfo && <div className="flex items-center justify-center z-10 w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full shadow-2xl shadow-yellow-400/50">
                         <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full animate-pulse">
                         </div>
@@ -124,7 +124,7 @@ export const Skills = () => {
                     </div>
                 </div>
 
-                <div className="relative flex items-center justify-center md:mr-60 lg:-mb-65" onMouseEnter={() => setBackSystemInfo(true)} onMouseLeave={() => setBackSystemInfo(false)}>
+                <div className="relative flex items-center justify-center md:mr-20 lg:-mb-65" onMouseEnter={() => setBackSystemInfo(true)} onMouseLeave={() => setBackSystemInfo(false)}>
                     { !backSystemInfo && <div className="flex items-center justify-center z-10 w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full shadow-2xl shadow-yellow-400/50">
                         <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full animate-pulse">
                         </div>
