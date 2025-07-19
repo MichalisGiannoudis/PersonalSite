@@ -49,14 +49,24 @@ export const useScrollHashUpdate = () => {
       }, 1000);
     };
 
+    const debounceTime = 100;
+    let debounceTimeout: NodeJS.Timeout | null = null;
     let ticking = false;
+    
     const handleScroll = () => {
+      if (debounceTimeout) {
+        clearTimeout(debounceTimeout);
+      }
+      
       if (!ticking) {
+        ticking = true;
         requestAnimationFrame(() => {
-          updateHash();
+          debounceTimeout = setTimeout(() => {
+            updateHash();
+            debounceTimeout = null;
+          }, debounceTime);
           ticking = false;
         });
-        ticking = true;
       }
     };
 
