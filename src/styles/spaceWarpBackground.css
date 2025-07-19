@@ -1,0 +1,225 @@
+.warp-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.warp-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  perspective: 1200px;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  transform-origin: center center;
+}
+
+.warp-streaks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.warp-streaks:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center,
+    rgba(70, 70, 255, 0.1) 0%,
+    transparent 10%,
+    rgba(255, 255, 255, 0.05) 20%,
+    rgba(255, 255, 255, 0) 100%);
+  z-index: 1;
+}
+
+.warp-star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  box-shadow: 0 0 3px 1px rgba(255, 255, 255, 0.5);
+  animation: warp-star-animation 3s linear infinite;
+  transform-origin: center center;
+  will-change: transform, opacity;
+}
+
+.warp-streaks-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.warp-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 50%;
+  box-shadow: 
+    0 0 20px 15px rgba(255, 255, 255, 0.8),
+    0 0 40px 25px rgba(100, 180, 255, 0.6),
+    0 0 60px 35px rgba(70, 130, 240, 0.4);
+  animation: pulse-center 2s ease-in-out infinite;
+  z-index: 5;
+}
+
+.warp-tunnel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, 
+    rgba(100, 150, 255, 0.5) 0%, 
+    rgba(50, 100, 200, 0.4) 10%, 
+    rgba(30, 60, 180, 0.3) 20%, 
+    rgba(20, 40, 150, 0.2) 40%, 
+    transparent 70%);
+  z-index: 3;
+  animation: tunnel-pulse 3s ease-in-out infinite;
+}
+
+@keyframes warp-star-animation {
+  0% {
+    transform: translate(-50%, -50%) scale(0.1) translateZ(0px);
+    top: 50%;
+    left: 50%;
+    opacity: 0.3;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2) translateZ(500px);
+    top: var(--end-y);
+    left: var(--end-x);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-center {
+  0% { opacity: 0.7; transform: translate(-50%, -50%) scale(0.8); }
+  50% { opacity: 1; transform: translate(-50%, -50%) scale(1.3); }
+  100% { opacity: 0.7; transform: translate(-50%, -50%) scale(0.8); }
+}
+
+@keyframes tunnel-pulse {
+  0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.6; }
+  50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.9; }
+  100% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.6; }
+}
+
+.warp-active .stars-background {
+  opacity: 0.2;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.warp-active .warp-background {
+  opacity: 1;
+}
+
+.warp-active .warp-star {
+  animation-duration: 2s !important;
+}
+
+.warp-active .warp-center {
+  box-shadow: 
+    0 0 30px 20px rgba(255, 255, 255, 0.9),
+    0 0 60px 40px rgba(100, 180, 255, 0.7),
+    0 0 90px 60px rgba(70, 130, 240, 0.5);
+  animation-duration: 0.8s;
+}
+
+.warp-active .warp-tunnel {
+  background: radial-gradient(circle at center, 
+    rgba(120, 180, 255, 0.6) 0%, 
+    rgba(70, 120, 230, 0.5) 10%, 
+    rgba(40, 80, 200, 0.4) 20%, 
+    rgba(30, 60, 180, 0.3) 40%, 
+    transparent 70%);
+  animation-duration: 1.5s;
+}
+
+.warp-trail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.warp-active .warp-trail {
+  animation: trail-opacity 3s ease-in-out infinite;
+}
+
+.warp-star.with-trail::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  transform: translate(-50%, -50%);
+  filter: blur(3px);
+  opacity: 0.6;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.warp-star.with-trail::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: inherit;
+  transform: translate(-50%, -50%);
+  filter: blur(5px);
+  opacity: 0.3;
+  border-radius: 50%;
+  z-index: -2;
+}
+
+@keyframes trail-opacity {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.8; }
+}
+
+.blue-tint {
+  filter: hue-rotate(210deg) saturate(150%);
+}
+
+.yellow-tint {
+  filter: hue-rotate(45deg) saturate(120%);
+}
+
+.purple-tint {
+  filter: hue-rotate(280deg) saturate(130%);
+}

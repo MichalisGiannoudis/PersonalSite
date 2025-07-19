@@ -1,5 +1,6 @@
 @import "tailwindcss";
-@import "../styles/warpBackground.css";
+@import "../styles/spaceBackground.css";
+@import "../styles/spaceWarpBackground.css";
 
 body {
   font-family: Audiowide, system-ui, sans-serif;
