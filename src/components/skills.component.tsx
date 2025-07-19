@@ -2,6 +2,7 @@
 
 import { frontendSkills, coreSkills, backendSkills} from "@/types/skills"
 import { useState, useEffect } from "react";
+import { startRandomBoolInterval } from "@/utilities/randomValue";
 
 export const Skills = () => {
     
@@ -11,16 +12,7 @@ export const Skills = () => {
     const [randomBool, setRandomBool] = useState<boolean>(false);
     const [isClient, setIsClient] = useState<boolean>(false);
     const [isMobile, setIsMobile] = useState<boolean>(false);
-
-    const startRandomBoolInterval = (intervalMs: number = 2000, probability: number = 0.3) => {
-        const interval = setInterval(() => {
-            let prop = Math.random() < probability;
-            setRandomBool(prop);
-        }, intervalMs);
-        
-        return interval;
-    };
-
+    
     const getCirclePosition = (index: number, total: number, group: number) => {
         const angle = (index * 360) / total;
         let radius = 200;
@@ -41,7 +33,7 @@ export const Skills = () => {
 
     useEffect(() => {
         setIsClient(true);
-        const interval = startRandomBoolInterval(3000, 0.3);
+        const interval = startRandomBoolInterval(3000, 0.3, setRandomBool);
         
         const handleResize = () => {
             const width = window.innerWidth;
