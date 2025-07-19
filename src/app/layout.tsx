@@ -27,9 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${audiowide.variable} antialiased`}
-      >
+      <body className={`${audiowide.variable} antialiased`}>
         {children}
       </body>
     </html>

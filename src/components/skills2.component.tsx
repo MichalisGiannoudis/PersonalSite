@@ -5,9 +5,9 @@ import { useState, useEffect } from "react";
 
 export const Skills2 = () => {
     
-    const [frontSystmeInfo, setFrontSystemInfo] = useState<boolean>(false);
-    const [coreSystmeInfo, setCoreSystemInfo] = useState<boolean>(false);
-    const [backSystmeInfo, setBackSystemInfo] = useState<boolean>(false);
+    const [frontSystemInfo, setFrontSystemInfo] = useState<boolean>(false);
+    const [coreSystemInfo, setCoreSystemInfo] = useState<boolean>(false);
+    const [backSystemInfo, setBackSystemInfo] = useState<boolean>(false);
     const [randomBool, setRandomBool] = useState<boolean>(false);
     const [isClient, setIsClient] = useState<boolean>(false);
     const [isMobile, setIsMobile] = useState<boolean>(false);
@@ -71,11 +71,11 @@ export const Skills2 = () => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-45 md:gap-20 min-h-[1000px] md:min-h-[1200px] lg:min-h-[500px]">
 
                <div className="relative flex items-center justify-center md:ml-40 lg:mb-30" onMouseEnter={() => setFrontSystemInfo(true)} onMouseLeave={() => setFrontSystemInfo(false)}>
-                    { !frontSystmeInfo && <div className="flex items-center justify-center z-10 w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full shadow-2xl shadow-yellow-400/50">
+                    { !frontSystemInfo && <div className="flex items-center justify-center z-10 w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full shadow-2xl shadow-yellow-400/50">
                         <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full animate-pulse">
                         </div>
                     </div> }
-                    { frontSystmeInfo && <div className="overflow-x-hidden flex items-center justify-center w-55 h-20 bg-gradient-to-br from-gray-700/30 to-indigo-800/30 rounded-lg shadow-xl shadow-purple-400/50 border-1 border-indigo-500/30">
+                    { frontSystemInfo && <div className="overflow-x-hidden flex items-center justify-center w-55 h-20 bg-gradient-to-br from-gray-700/30 to-indigo-800/30 rounded-lg shadow-xl shadow-purple-400/50 border-1 border-indigo-500/30">
                         <p className={`text-sm text-center glitch-effect ${randomBool ? 'text-red-500' : 'text-white'}`} data-text="System: Core Skills">
                             {randomBool ? "System: UNKNOWN" : "System: FrontEnd Skills"} <br/> 
                             {randomBool ? "Status: ERROR 404" : "Status: Stable"}
@@ -103,11 +103,11 @@ export const Skills2 = () => {
                 </div>
                 
                 <div className="relative flex items-center justify-center" onMouseEnter={() => setCoreSystemInfo(true)} onMouseLeave={() => setCoreSystemInfo(false)}>
-                    { !coreSystmeInfo && <div className="flex items-center justify-center z-10 w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full shadow-2xl shadow-yellow-400/50">
+                    { !coreSystemInfo && <div className="flex items-center justify-center z-10 w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full shadow-2xl shadow-yellow-400/50">
                         <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full animate-pulse">
                         </div>
                     </div> }
-                    { coreSystmeInfo && <div className="overflow-x-hidden flex items-center justify-center w-55 h-20 bg-gradient-to-br from-purple-800/30 to-amber-800/30 rounded-lg shadow-xl shadow-indigo-500/50 border-1 border-indigo-500/30">
+                    { coreSystemInfo && <div className="overflow-x-hidden flex items-center justify-center w-55 h-20 bg-gradient-to-br from-purple-800/30 to-amber-800/30 rounded-lg shadow-xl shadow-indigo-500/50 border-1 border-indigo-500/30">
                         <p className={`text-sm text-center glitch-effect ${randomBool ? 'text-red-500' : 'text-white'}`} data-text="System: Core Skills">
                             {randomBool ? "System: UNKNOWN" : "System: Core Skills"} <br/> 
                             {randomBool ? "Status: ERROR 404" : "Status: Stable"}
@@ -135,11 +135,11 @@ export const Skills2 = () => {
                 </div>
 
                 <div className="relative flex items-center justify-center md:mr-60 lg:-mb-65" onMouseEnter={() => setBackSystemInfo(true)} onMouseLeave={() => setBackSystemInfo(false)}>
-                    { !backSystmeInfo && <div className="flex items-center justify-center z-10 w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full shadow-2xl shadow-yellow-400/50">
+                    { !backSystemInfo && <div className="flex items-center justify-center z-10 w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full shadow-2xl shadow-yellow-400/50">
                         <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full animate-pulse">
                         </div>
                     </div> }
-                    { backSystmeInfo && <div className="overflow-x-hidden flex items-center justify-center w-55 h-20 bg-gradient-to-br from-gray-700/30 to-indigo-800/30 rounded-lg shadow-xl shadow-purple-400/50 border-1 border-indigo-500/30">
+                    { backSystemInfo && <div className="overflow-x-hidden flex items-center justify-center w-55 h-20 bg-gradient-to-br from-gray-700/30 to-indigo-800/30 rounded-lg shadow-xl shadow-purple-400/50 border-1 border-indigo-500/30">
                         <p className={`text-sm text-center glitch-effect ${randomBool ? 'text-red-500' : 'text-white'}`} data-text="System: Core Skills">
                             {randomBool ? "System: UNKNOWN" : "System: BackEnd Skills"} <br/> 
                             {randomBool ? "Status: ERROR 404" : "Status: Stable"}
