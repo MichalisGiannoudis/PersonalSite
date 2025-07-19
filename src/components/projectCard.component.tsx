@@ -3,21 +3,6 @@ import { frontendSkills, coreSkills, backendSkills } from "@/types/skills";
 
 export const ProjectCard = ({ project } : {  project:Project }) => {
 
-    const progress = (phase: string) => {
-        switch(phase) {
-            case 'P1':
-                return 25;
-            case 'P2':
-                return 50;
-            case 'P3':
-                return 75;
-            case 'P4':
-                return 100;
-            default:
-                return 0;
-        }
-    }
-
     return (
         <div className="bg-gray-900/20 rounded-xl p-6 border border-gray-700/50 hover:shadow-lg transition-shadow duration-300">
             <div className="flex justify-between items-center mb-16">
@@ -49,33 +34,15 @@ export const ProjectCard = ({ project } : {  project:Project }) => {
             </div>
             <div className="relative mb-12">
                 <div className="flex items-center gap-x-1">
-                    <div className={`w-full h-2.5 flex flex-col justify-center overflow-hidden ${project.phase === 'P1' || project.phase === 'P2' || project.phase === 'P3' || project.phase === 'P4' ? "bg-blue-700" : "bg-gray-300"} text-xs text-white text-center whitespace-nowrap transition duration-500`}
-                        role="progressbar"
-                        aria-valuenow={25}
-                        aria-valuemin={0}
-                        aria-valuemax={100}
-                    ></div>                   
-                    <div className={`w-full h-2.5 flex flex-col justify-center overflow-hidden ${project.phase === 'P2' || project.phase === 'P3' || project.phase === 'P4' ? "bg-blue-700" : "bg-gray-300"} text-xs text-white text-center whitespace-nowrap transition duration-500`}
-                        role="progressbar"
-                        aria-valuenow={25}
-                        aria-valuemin={0}
-                        aria-valuemax={100}
-                    ></div>
-                    <div className={`w-full h-2.5 flex flex-col justify-center overflow-hidden ${project.phase === 'P3' || project.phase === 'P4' ? "bg-blue-700" : "bg-gray-300"} text-xs text-white text-center whitespace-nowrap transition duration-500`}
-                        role="progressbar"
-                        aria-valuenow={25}
-                        aria-valuemin={0}
-                        aria-valuemax={100}
-                    ></div>
-                    <div className={`w-full h-2.5 flex flex-col justify-center overflow-hidden ${project.phase === 'P4' ? "bg-blue-700" : "bg-gray-300"} text-xs text-white text-center whitespace-nowrap transition duration-500`}
-                        role="progressbar"
-                        aria-valuenow={25}
-                        aria-valuemin={0}
-                        aria-valuemax={100}
-                    ></div>
+                    {['P1', 'P2', 'P3', 'P4'].map((phase, idx) => (
+                        <div key={phase} className={`w-full h-2.5 flex flex-col justify-center overflow-hidden ${
+                                ['P1', 'P2', 'P3', 'P4'].indexOf(project.phase) >= idx ? "bg-blue-700" : "bg-gray-300"
+                            } text-xs text-white text-center whitespace-nowrap transition duration-500`}
+                        ></div>
+                    ))}
                     <div>
                         <div className="w-10 text-end">
-                            <span className="text-sm text-amber-500">{progress(project.phase)+'%'}</span>
+                            <span className="text-sm text-amber-500">{parseInt(project.phase.replace('P', '')) * 25 +'%'}</span>
                         </div>
                     </div>
                 </div>
