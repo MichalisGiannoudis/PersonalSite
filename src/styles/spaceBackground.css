@@ -1,0 +1,105 @@
+/* Warp Space Background Styles */
+
+.stars-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.blinking-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(1px 1px at 20px 30px, rgba(255,255,255,0.9), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.7), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.8), transparent),
+    radial-gradient(3px 3px at 130px 80px, rgba(255,255,255,0.6), transparent),
+    radial-gradient(1px 1px at 160px 30px, rgba(255,255,255,0.9), transparent),
+    radial-gradient(2px 2px at 200px 120px, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 250px 60px, rgba(255,255,255,0.8), transparent),
+    radial-gradient(2px 2px at 280px 100px, rgba(255,255,255,0.7), transparent),
+    radial-gradient(1px 1px at 320px 40px, rgba(255,255,255,0.9), transparent),
+    radial-gradient(3px 3px at 350px 140px, rgba(255,255,255,0.4), transparent);
+  background-size: 400px 400px;
+  background-repeat: repeat;
+  animation: twinkle-random-1 10s linear infinite;
+}
+
+.blinking-stars-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(2px 2px at 50px 100px, rgba(255,255,255,0.6), transparent),
+    radial-gradient(1px 1px at 110px 150px, rgba(255,255,255,0.8), transparent),
+    radial-gradient(3px 3px at 180px 90px, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 210px 170px, rgba(255,255,255,0.9), transparent),
+    radial-gradient(2px 2px at 260px 50px, rgba(255,255,255,0.7), transparent),
+    radial-gradient(1px 1px at 290px 130px, rgba(255,255,255,0.8), transparent),
+    radial-gradient(2px 2px at 330px 200px, rgba(255,255,255,0.6), transparent),
+    radial-gradient(3px 3px at 370px 80px, rgba(255,255,255,0.4), transparent);
+  background-size: 450px 450px;
+  background-repeat: repeat;
+  animation: twinkle-random-2 10s linear infinite;
+}
+
+.blinking-stars-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(1px 1px at 80px 50px, rgba(255,255,255,0.7), transparent),
+    radial-gradient(3px 3px at 140px 190px, rgba(255,255,255,0.4), transparent),
+    radial-gradient(2px 2px at 200px 130px, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1px 1px at 270px 80px, rgba(255,255,255,0.9), transparent),
+    radial-gradient(2px 2px at 320px 160px, rgba(255,255,255,0.6), transparent),
+    radial-gradient(1px 1px at 360px 40px, rgba(255,255,255,0.8), transparent),
+    radial-gradient(3px 3px at 100px 220px, rgba(255,255,255,0.5), transparent);
+  background-size: 500px 500px;
+  background-repeat: repeat;
+  animation: twinkle-random-3 8s linear infinite;
+}
+
+@keyframes twinkle-random-1 {
+  0% { opacity: 0.2; }
+  15% { opacity: 0.9; }
+  30% { opacity: 0.1; }
+  45% { opacity: 0.7; }
+  60% { opacity: 0.3; }
+  75% { opacity: 1; }
+  90% { opacity: 0.4; }
+  100% { opacity: 0.2; }
+}
+
+@keyframes twinkle-random-2 {
+  0% { opacity: 0.4; }
+  12% { opacity: 0.1; }
+  28% { opacity: 0.8; }
+  42% { opacity: 0.3; }
+  58% { opacity: 0.9; }
+  72% { opacity: 0.2; }
+  88% { opacity: 0.6; }
+  100% { opacity: 0.4; }
+}
+
+@keyframes twinkle-random-3 {
+  0% { opacity: 0.3; }
+  18% { opacity: 0.7; }
+  35% { opacity: 0.1; }
+  52% { opacity: 0.9; }
+  68% { opacity: 0.4; }
+  84% { opacity: 0.2; }
+  100% { opacity: 0.3; }
+}
