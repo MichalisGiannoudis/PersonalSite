@@ -6,7 +6,7 @@ export const ProjectCard = ({ project } : {  project:Project }) => {
     return (
         <div className="bg-gray-900/20 rounded-xl p-6 border border-gray-700/50 hover:shadow-lg transition-shadow duration-300">
             <div className="flex justify-between items-center mb-16">
-                <h3 className="text-xl font-semibold">{project.title}</h3>
+                <h3 className="text-xl font-semibold cursor-default">{project.title}</h3>
                 <div className="flex gap-2">
                     {project.screens.split(",").map(s => s.trim().toLowerCase()).map((screen) => {
                         const icons: Record<string, string> = {
@@ -42,7 +42,7 @@ export const ProjectCard = ({ project } : {  project:Project }) => {
                     ))}
                     <div>
                         <div className="w-10 text-end">
-                            <span className="text-sm text-amber-500">{parseInt(project.phase.replace('P', '')) * 25 +'%'}</span>
+                            <span className="text-sm text-amber-500 cursor-default">{parseInt(project.phase.replace('P', '')) * 25 +'%'}</span>
                         </div>
                     </div>
                 </div>
@@ -50,20 +50,20 @@ export const ProjectCard = ({ project } : {  project:Project }) => {
                 <div className="grid grid-cols-[5%_85%_10%] mb-4">
                     <div className="flex flex-col items-center mr-3">
                         <div className={`w-3 h-3 bg-blue-700 rounded-full`}></div>
-                        <span className="text-xs text-gray-400 mt-1"> Start </span>
+                        <span className="text-xs text-gray-400 mt-1 cursor-default"> Start </span>
                     </div>
                     <div className="grid grid-cols-3">
                         <div className="flex flex-col items-center ml-2 lg:ml-9">
                             <div className={`w-3 h-3 ${project.phase === 'P1' || project.phase === 'P2' || project.phase === 'P3' || project.phase === 'P4' ? "bg-blue-700" : "bg-gray-300"} rounded-full`}></div>
-                            <span className="text-xs text-gray-400 mt-1 whitespace-nowrap"> Phase 1 </span>
+                            <span className="text-xs text-gray-400 mt-1 whitespace-nowrap cursor-default"> Phase 1 </span>
                         </div>
                         <div className="flex flex-col items-center mr-7.5 lg:mr-4">
                             <div className={`w-3 h-3 ${project.phase === 'P2' || project.phase === 'P3' || project.phase === 'P4' ? "bg-blue-700" : "bg-gray-300"} rounded-full`}></div>
-                            <span className="text-xs text-gray-400 mt-1 whitespace-nowrap"> Phase 2 </span>
+                            <span className="text-xs text-gray-400 mt-1 whitespace-nowrap cursor-default"> Phase 2 </span>
                         </div>
                         <div className="flex flex-col items-center mr-17 lg:mr-18">
                             <div className={`w-3 h-3 ${project.phase === 'P3' || project.phase === 'P4' ? "bg-blue-700" : "bg-gray-300"} rounded-full`}></div>
-                            <span className="text-xs text-gray-400 mt-1 whitespace-nowrap"> Phase 3 </span>
+                            <span className="text-xs text-gray-400 mt-1 whitespace-nowrap cursor-default"> Phase 3 </span>
                         </div>
                     </div>
                 </div>
@@ -74,12 +74,12 @@ export const ProjectCard = ({ project } : {  project:Project }) => {
                 </div>
             )}
             <div className="flex items-center justify-center mb-4">
-                <p className="text-lg font-medium mb-2">Mission</p>
+                <p className="text-lg font-medium mb-2 cursor-default">Mission</p>
                 <div className="flex-1 h-0.5 bg-gradient-to-l from-transparent to-white/40 ml-4"></div>
             </div>
-            <p className="text-gray-300 mb-4">{project.description}</p>
+            <p className="text-gray-300 mb-4 cursor-default">{project.description}</p>
             <div className="flex items-center justify-center mb-4">
-                <p className="text-lg font-medium mb-2">Cargo</p>
+                <p className="text-lg font-medium mb-2 cursor-default">Cargo</p>
                 <div className="flex-1 h-0.5 bg-gradient-to-l from-transparent to-white/40 ml-4"></div>
             </div>
             <div className="flex flex-wrap gap-2 mb-8">

@@ -13,24 +13,24 @@ export const Contact = () => {
             </div>
             <div className="max-w-6xl mx-auto relative z-10">
                 <div className="flex items-center justify-center mb-6">
-                    <p className="text-4xl font-bold mx-4 whitespace-nowrap">My Portal</p>
+                    <p className="text-4xl font-bold mx-4 whitespace-nowrap cursor-default">My Portal</p>
                 </div>
                 <div className="flex items-center justify-center mb-6">
                     <div className="h-0.5 flex-1 bg-gradient-to-r from-transparent to-white/40"></div>
-                    <p className="text-2xl font-bold mx-4 whitespace-nowrap">Contact</p>
+                    <p className="text-2xl font-bold mx-4 whitespace-nowrap cursor-default">Contact</p>
                     <div className="h-0.5 flex-1 bg-gradient-to-l from-transparent to-white/40"></div>
                 </div>
             </div>
             <div className="max-w-2xl mx-auto relative z-10">
                 <div className="text-center mb-12">
-                    <p className="text-lg text-white mb-4">Feel free to reach out for any inquiries or collaborations.</p>
-                    <p className="text-lg text-white">You can contact me via email or connect with me on social media.</p>
+                    <p className="text-lg text-white mb-4 cursor-default">Feel free to reach out for any inquiries or collaborations.</p>
+                    <p className="text-lg text-white cursor-default">You can contact me via email or connect with me on social media.</p>
                 </div>
                 <div className="flex flex-col items-center space-y-4">
                 </div>
                 <div className="flex flex-col items-center space-y-4">
                     <ContactForm />
-                    <p className="text-lg text-white">Socials</p>
+                    <p className="text-lg text-white cursor-default">Socials</p>
                     <div className="flex space-x-6">
                         <a href="https://github.com/michalisgiannoudis" className="hover:text-amber-400 transition-colors" aria-label="GitHub" target="_blank">
                             <img className="w-10 h-10 transition-colors duration-200" src="/social/github-icon.png" alt="GitHub Icon"

@@ -12,11 +12,11 @@ export const Portfolio = () => {
             <div className="max-w-6xl mx-auto relative z-10">
                 <div className="text-center mb-16">
                     <div className="flex items-center justify-center mb-6">
-                        <p className="text-4xl font-bold mx-4 whitespace-nowrap">My Fleet</p>
+                        <p className="text-4xl font-bold mx-4 whitespace-nowrap cursor-default">My Fleet</p>
                     </div>
                     <div className="flex items-center justify-center mb-6">
                         <div className="h-0.5 flex-1 bg-gradient-to-r from-transparent to-white/40"></div>
-                        <p className="text-2xl font-bold mx-4 whitespace-nowrap">Portfolio</p>
+                        <p className="text-2xl font-bold mx-4 whitespace-nowrap cursor-default">Portfolio</p>
                         <div className="h-0.5 flex-1 bg-gradient-to-l from-transparent to-white/40"></div>
                     </div>
                 </div>

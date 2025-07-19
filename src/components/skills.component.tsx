@@ -50,11 +50,11 @@ export const Skills = () => {
         <>
             <div className="text-center mb-16 md:mb-24">
                 <div className="flex items-center justify-center mb-6">
-                    <p className="text-4xl font-bold mx-4 whitespace-nowrap"> My Universe </p>
+                    <p className="text-4xl font-bold mx-4 whitespace-nowrap cursor-default"> My Universe </p>
                 </div>
                 <div className="flex items-center justify-center mb-6">
                     <div className="h-0.5 flex-1 bg-gradient-to-r from-transparent to-white/40"></div>
-                    <p className="text-2xl font-bold mx-4 whitespace-nowrap"> Skills </p>
+                    <p className="text-2xl font-bold mx-4 whitespace-nowrap cursor-default"> Skills </p>
                     <div className="h-0.5 flex-1 bg-gradient-to-l from-transparent to-white/40"></div>
                 </div>
             </div>
