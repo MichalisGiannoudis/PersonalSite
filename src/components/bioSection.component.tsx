@@ -1,5 +1,5 @@
 import { TimeLine } from "./timeline.component";
-import { Skills2 } from "./skills2.component";
+import { Skills } from "./skills.component";
 import { bio } from "../content/bio";
 
 export const BioSection = () => {
@@ -52,7 +52,7 @@ export const BioSection = () => {
                     </div>
                 </div>
                 <TimeLine />
-                <Skills2 />
+                <Skills />
             </div>
         </div>        
     );
