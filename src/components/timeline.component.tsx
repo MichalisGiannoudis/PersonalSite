@@ -43,7 +43,7 @@ export const TimeLine = () => {
                     <div className="h-0.5 flex-1 bg-gradient-to-l from-transparent to-white/40"></div>
                 </div>
             </div>
-            <div className={`p-8 relative ${visualize ? 'min-h-[800px]' : 'min-h-[1200px]'} lg:min-h-[800px] overflow-hidden`}>            
+            <div className={`p-8 relative ${visualize ? 'min-h-[800px]' : 'min-h-[1200px]'} min-h-[1400px] md:min-h-[650px] lg:min-h-[800px] overflow-hidden`}>            
                 {visualize && (
                     <div className={`absolute h-155 inset-0 flex items-center justify-center animate-fade-in-crawl`}>
                         <StarWars isPlaying={visualize}/>
@@ -64,7 +64,7 @@ export const TimeLine = () => {
                 {!visualize && (
                     <div className="flex lg:justify-center relative">
                         {['idle', 'fading', 'shrinking'].includes(animationStep) && (
-                            <div className={`h-275 lg:h-155 w-1 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full ${animationStep === 'shrinking' ? 'animate-shrink-line' : ''}`}></div>
+                            <div className={`h-320 md:h-210 lg:h-155 w-1 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full ${animationStep === 'shrinking' ? 'animate-shrink-line' : ''}`}></div>
                         )}
                         {['idle', 'fading'].includes(animationStep) && (
                             <div className={`absolute inset-0 space-y-12 ${animationStep === 'fading' ? 'animate-fade-out-box' : ''}`}>
