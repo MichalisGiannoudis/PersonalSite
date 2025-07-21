@@ -31,6 +31,11 @@ export const TimeLine = () => {
         }
     };
 
+    const handleCloseStarWars = () => {
+        setVisualize(false);
+        setAnimationStep('idle');
+    };
+
     return (
         <>
             <div className="text-center mb-10">
@@ -46,7 +51,7 @@ export const TimeLine = () => {
             <div className={`p-8 relative ${visualize ? 'min-h-[800px]' : 'min-h-[1200px]'} min-h-[1400px] md:min-h-[650px] lg:min-h-[800px] overflow-hidden`}>            
                 {visualize && (
                     <div className={`absolute h-155 inset-0 flex items-center justify-center animate-fade-in-crawl`}>
-                        <StarWars isPlaying={visualize}/>
+                        <StarWars isPlaying={visualize} onClose={handleCloseStarWars}/>
                     </div>
                 )}
 
